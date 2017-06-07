@@ -1,0 +1,57 @@
+//блок с кнопками
+.actions {
+  border: 1px solid @blue;
+  background-color: @blue-light;
+  margin: 20px auto;
+  padding: 30px 5px;
+}
+
+.actions__btn--wrp {
+  .clearfix();
+  max-width: 682px;
+  margin: 0 auto;
+}
+
+.actions__btn-left {
+  float: left;
+  margin: 5px;
+}
+
+.actions__btn-right {
+  float: right;
+  margin: 5px;
+}
+
+@media (max-width: 1200px) {
+  body.full-width {
+    .actions {
+      text-align: center;
+    }  
+    .actions__btn-left {
+      float: none;
+      margin-bottom: 15px;
+    }
+    .actions__btn-right {
+      float:none;
+    }
+  }
+}
+
+@media (max-width: 985px) {
+  .actions {
+    margin: 20px 15px;
+  } 
+}
+
+@media (max-width: 670px) {
+  .actions {
+    text-align: center;
+  }
+  .actions__btn-left {
+    float: none;
+    margin-bottom: 15px;
+  }
+  .actions__btn-right {
+    float:none;
+  }
+}

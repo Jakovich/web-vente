@@ -1,0 +1,192 @@
+.franchise-finance {
+  box-shadow: @shadow;
+  width: 270px;
+  background-color: #ffffff;
+  padding: 10px 0;
+  margin-bottom: 25px;
+}
+
+.franchise-finance__title {
+  margin: 0 15px;
+  margin-bottom: 10px;
+  color: #666666;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 7px;
+  &:before {
+    position: absolute;
+    content: '';
+    height: 3px;
+    left: 0;
+    right: 0;
+    background-color: @green;
+    bottom: 0;
+  }
+  
+  &:after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    right: 0;
+    left: 70px;
+    background-color: @gray;
+    bottom: 0;
+  }
+}
+
+.franchise-finance__items {
+  padding: 0 15px;
+  border-bottom: 1px solid #999999;
+  margin-bottom: 15px;
+}
+
+.franchise-finance__award {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #999999;
+  margin-bottom: 15px;
+}
+
+.franchise-finance__name {
+  font-weight: bold;
+  color: #666666;
+  display: block;
+}
+
+.franchise-finance__data {
+  font-weight: bold;
+  color: @green;
+}
+
+.franchise-finance__award-wrp {
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+  
+  a {
+    color: #016b9e;
+    transition: @transition;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      color: @green;
+    }
+  }
+}
+
+.franchise-finance__views {
+  padding: 0 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #999999;
+  margin-bottom: 15px;
+  span {
+    display: inline-block;
+    border: 1px solid @green;
+    padding: 2px;
+  }
+}
+
+.franchise-finance__details {
+  padding: 0 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #999999;
+  margin-bottom: 15px;
+  a {
+    display: inline-block;
+    color: #016b9e;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: @transition;
+    &:hover {
+      color: @green;
+    }
+  }
+}
+
+.franchise-finance__link {
+  border: 3px solid @green;
+  background-color: @green;
+  color: #ffffff;
+  transition: @transition;
+  display: block;
+  width: 214px;
+  padding: 5px 0;
+  text-align: center;
+  text-decoration: none;
+  margin: 8px auto;
+  &:hover {
+    background-color: #ffffff;
+    color: @green;
+  }
+}
+
+.franchise-finance__link--bold {
+  font-weight: bold;
+}
+
+@media (max-width: 1300px) {
+  .franchise-finance {
+    width: 240px;
+    font-size: 15px;
+  }
+  
+  .franchise-finance__link {
+    width: 190px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .franchise-finance {
+    width: 220px;
+  }
+}
+
+@media (max-width: 985px) {
+  .franchise-finance {
+    width: auto;
+    box-shadow: none;
+    margin-bottom: 0;
+  }
+  
+  .franchise-finance__item {
+    display: inline-block;
+    width: 49%;
+  }
+  
+  .franchise-finance__links {
+    .clearfix();
+    padding: 0 15px;
+  }
+  
+  .franchise-finance__link {
+    float: left;
+  }
+  
+  .franchise-finance__link--bold {
+    float: right;
+  }
+  
+  .franchise-finance__views {
+    text-align: center;
+  }
+  
+  .franchise-finance__details {
+    .clearfix();
+    
+    a {
+      float: right;
+      
+    }
+    a:first-child {
+      float: left;
+    }
+  }
+  
+  .franchise-finance__details-content {
+    .clearfix();
+    max-width: 480px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+}

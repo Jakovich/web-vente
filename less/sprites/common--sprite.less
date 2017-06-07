@@ -1,0 +1,121 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+@icon-down-grey-name: 'icon-down-grey';
+@icon-down-grey-x: 12px;
+@icon-down-grey-y: 0px;
+@icon-down-grey-offset-x: -12px;
+@icon-down-grey-offset-y: 0px;
+@icon-down-grey-width: 10px;
+@icon-down-grey-height: 6px;
+@icon-down-grey-total-width: 22px;
+@icon-down-grey-total-height: 15px;
+@icon-down-grey-image: 'common-sprite.png';
+@icon-down-grey: 12px 0px -12px 0px 10px 6px 22px 15px 'common-sprite.png' 'icon-down-grey';
+@icon-down-name: 'icon-down';
+@icon-down-x: 0px;
+@icon-down-y: 9px;
+@icon-down-offset-x: 0px;
+@icon-down-offset-y: -9px;
+@icon-down-width: 10px;
+@icon-down-height: 6px;
+@icon-down-total-width: 22px;
+@icon-down-total-height: 15px;
+@icon-down-image: 'common-sprite.png';
+@icon-down: 0px 9px 0px -9px 10px 6px 22px 15px 'common-sprite.png' 'icon-down';
+@icon-succes-name: 'icon-succes';
+@icon-succes-x: 0px;
+@icon-succes-y: 0px;
+@icon-succes-offset-x: 0px;
+@icon-succes-offset-y: 0px;
+@icon-succes-width: 12px;
+@icon-succes-height: 9px;
+@icon-succes-total-width: 22px;
+@icon-succes-total-height: 15px;
+@icon-succes-image: 'common-sprite.png';
+@icon-succes: 0px 0px 0px 0px 12px 9px 22px 15px 'common-sprite.png' 'icon-succes';
+@spritesheet-width: 22px;
+@spritesheet-height: 15px;
+@spritesheet-image: 'common-sprite.png';
+@spritesheet-sprites: @icon-down-grey @icon-down @icon-succes;
+@spritesheet: 22px 15px 'common-sprite.png' @spritesheet-sprites;
+
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.sprite-width(@sprite) {
+  width: extract(@sprite, 5);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 6);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 3);
+  @sprite-offset-y: extract(@sprite, 4);
+  background-position: @sprite-offset-x @sprite-offset-y;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: extract(@sprite, 9);
+  @sprite-image-bare: ~`"@{sprite-image}".slice(1, -1)`;
+  background-image: url(@sprite-image-bare);
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+.sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
+  @sprite: extract(@sprites, @i);
+  @sprite-name: e(extract(@sprite, 10));
+  .@{sprite-name} {
+    .sprite(@sprite);
+  }
+  .sprites(@sprites, @i + 1);
+}

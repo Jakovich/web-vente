@@ -1,0 +1,330 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+@adv-buyer-sm-name: 'adv-buyer-sm';
+@adv-buyer-sm-x: 153px;
+@adv-buyer-sm-y: 172px;
+@adv-buyer-sm-offset-x: -153px;
+@adv-buyer-sm-offset-y: -172px;
+@adv-buyer-sm-width: 40px;
+@adv-buyer-sm-height: 40px;
+@adv-buyer-sm-total-width: 284px;
+@adv-buyer-sm-total-height: 226px;
+@adv-buyer-sm-image: 'franchise-add-sprite-sm.png';
+@adv-buyer-sm: 153px 172px -153px -172px 40px 40px 284px 226px 'franchise-add-sprite-sm.png' 'adv-buyer-sm';
+@adv-experience-sm-name: 'adv-experience-sm';
+@adv-experience-sm-x: 33px;
+@adv-experience-sm-y: 172px;
+@adv-experience-sm-offset-x: -33px;
+@adv-experience-sm-offset-y: -172px;
+@adv-experience-sm-width: 40px;
+@adv-experience-sm-height: 40px;
+@adv-experience-sm-total-width: 284px;
+@adv-experience-sm-total-height: 226px;
+@adv-experience-sm-image: 'franchise-add-sprite-sm.png';
+@adv-experience-sm: 33px 172px -33px -172px 40px 40px 284px 226px 'franchise-add-sprite-sm.png' 'adv-experience-sm';
+@adv-professional-sm-name: 'adv-professional-sm';
+@adv-professional-sm-x: 193px;
+@adv-professional-sm-y: 172px;
+@adv-professional-sm-offset-x: -193px;
+@adv-professional-sm-offset-y: -172px;
+@adv-professional-sm-width: 40px;
+@adv-professional-sm-height: 40px;
+@adv-professional-sm-total-width: 284px;
+@adv-professional-sm-total-height: 226px;
+@adv-professional-sm-image: 'franchise-add-sprite-sm.png';
+@adv-professional-sm: 193px 172px -193px -172px 40px 40px 284px 226px 'franchise-add-sprite-sm.png' 'adv-professional-sm';
+@adv-site-sm-name: 'adv-site-sm';
+@adv-site-sm-x: 73px;
+@adv-site-sm-y: 172px;
+@adv-site-sm-offset-x: -73px;
+@adv-site-sm-offset-y: -172px;
+@adv-site-sm-width: 40px;
+@adv-site-sm-height: 40px;
+@adv-site-sm-total-width: 284px;
+@adv-site-sm-total-height: 226px;
+@adv-site-sm-image: 'franchise-add-sprite-sm.png';
+@adv-site-sm: 73px 172px -73px -172px 40px 40px 284px 226px 'franchise-add-sprite-sm.png' 'adv-site-sm';
+@adv-term-sm-name: 'adv-term-sm';
+@adv-term-sm-x: 113px;
+@adv-term-sm-y: 172px;
+@adv-term-sm-offset-x: -113px;
+@adv-term-sm-offset-y: -172px;
+@adv-term-sm-width: 40px;
+@adv-term-sm-height: 40px;
+@adv-term-sm-total-width: 284px;
+@adv-term-sm-total-height: 226px;
+@adv-term-sm-image: 'franchise-add-sprite-sm.png';
+@adv-term-sm: 113px 172px -113px -172px 40px 40px 284px 226px 'franchise-add-sprite-sm.png' 'adv-term-sm';
+@arrow-left-sm-name: 'arrow-left-sm';
+@arrow-left-sm-x: 247px;
+@arrow-left-sm-y: 133px;
+@arrow-left-sm-offset-x: -247px;
+@arrow-left-sm-offset-y: -133px;
+@arrow-left-sm-width: 32px;
+@arrow-left-sm-height: 47px;
+@arrow-left-sm-total-width: 284px;
+@arrow-left-sm-total-height: 226px;
+@arrow-left-sm-image: 'franchise-add-sprite-sm.png';
+@arrow-left-sm: 247px 133px -247px -133px 32px 47px 284px 226px 'franchise-add-sprite-sm.png' 'arrow-left-sm';
+@arrow-right-sm-name: 'arrow-right-sm';
+@arrow-right-sm-x: 247px;
+@arrow-right-sm-y: 86px;
+@arrow-right-sm-offset-x: -247px;
+@arrow-right-sm-offset-y: -86px;
+@arrow-right-sm-width: 33px;
+@arrow-right-sm-height: 47px;
+@arrow-right-sm-total-width: 284px;
+@arrow-right-sm-total-height: 226px;
+@arrow-right-sm-image: 'franchise-add-sprite-sm.png';
+@arrow-right-sm: 247px 86px -247px -86px 33px 47px 284px 226px 'franchise-add-sprite-sm.png' 'arrow-right-sm';
+@benefit-title-sm-name: 'benefit-title-sm';
+@benefit-title-sm-x: 137px;
+@benefit-title-sm-y: 97px;
+@benefit-title-sm-offset-x: -137px;
+@benefit-title-sm-offset-y: -97px;
+@benefit-title-sm-width: 36px;
+@benefit-title-sm-height: 33px;
+@benefit-title-sm-total-width: 284px;
+@benefit-title-sm-total-height: 226px;
+@benefit-title-sm-image: 'franchise-add-sprite-sm.png';
+@benefit-title-sm: 137px 97px -137px -97px 36px 33px 284px 226px 'franchise-add-sprite-sm.png' 'benefit-title-sm';
+@examples-title-sm-name: 'examples-title-sm';
+@examples-title-sm-x: 0px;
+@examples-title-sm-y: 134px;
+@examples-title-sm-offset-x: 0px;
+@examples-title-sm-offset-y: -134px;
+@examples-title-sm-width: 56px;
+@examples-title-sm-height: 38px;
+@examples-title-sm-total-width: 284px;
+@examples-title-sm-total-height: 226px;
+@examples-title-sm-image: 'franchise-add-sprite-sm.png';
+@examples-title-sm: 0px 134px 0px -134px 56px 38px 284px 226px 'franchise-add-sprite-sm.png' 'examples-title-sm';
+@hand-sm-name: 'hand-sm';
+@hand-sm-x: 137px;
+@hand-sm-y: 0px;
+@hand-sm-offset-x: -137px;
+@hand-sm-offset-y: 0px;
+@hand-sm-width: 63px;
+@hand-sm-height: 43px;
+@hand-sm-total-width: 284px;
+@hand-sm-total-height: 226px;
+@hand-sm-image: 'franchise-add-sprite-sm.png';
+@hand-sm: 137px 0px -137px 0px 63px 43px 284px 226px 'franchise-add-sprite-sm.png' 'hand-sm';
+@location-title-sm-name: 'location-title-sm';
+@location-title-sm-x: 200px;
+@location-title-sm-y: 43px;
+@location-title-sm-offset-x: -200px;
+@location-title-sm-offset-y: -43px;
+@location-title-sm-width: 41px;
+@location-title-sm-height: 45px;
+@location-title-sm-total-width: 284px;
+@location-title-sm-total-height: 226px;
+@location-title-sm-image: 'franchise-add-sprite-sm.png';
+@location-title-sm: 200px 43px -200px -43px 41px 45px 284px 226px 'franchise-add-sprite-sm.png' 'location-title-sm';
+@man-one-active-sm-name: 'man-one-active-sm';
+@man-one-active-sm-x: 247px;
+@man-one-active-sm-y: 43px;
+@man-one-active-sm-offset-x: -247px;
+@man-one-active-sm-offset-y: -43px;
+@man-one-active-sm-width: 37px;
+@man-one-active-sm-height: 43px;
+@man-one-active-sm-total-width: 284px;
+@man-one-active-sm-total-height: 226px;
+@man-one-active-sm-image: 'franchise-add-sprite-sm.png';
+@man-one-active-sm: 247px 43px -247px -43px 37px 43px 284px 226px 'franchise-add-sprite-sm.png' 'man-one-active-sm';
+@man-one-sm-name: 'man-one-sm';
+@man-one-sm-x: 247px;
+@man-one-sm-y: 0px;
+@man-one-sm-offset-x: -247px;
+@man-one-sm-offset-y: 0px;
+@man-one-sm-width: 37px;
+@man-one-sm-height: 43px;
+@man-one-sm-total-width: 284px;
+@man-one-sm-total-height: 226px;
+@man-one-sm-image: 'franchise-add-sprite-sm.png';
+@man-one-sm: 247px 0px -247px 0px 37px 43px 284px 226px 'franchise-add-sprite-sm.png' 'man-one-sm';
+@man-three-active-sm-name: 'man-three-active-sm';
+@man-three-active-sm-x: 137px;
+@man-three-active-sm-y: 43px;
+@man-three-active-sm-offset-x: -137px;
+@man-three-active-sm-offset-y: -43px;
+@man-three-active-sm-width: 49px;
+@man-three-active-sm-height: 54px;
+@man-three-active-sm-total-width: 284px;
+@man-three-active-sm-total-height: 226px;
+@man-three-active-sm-image: 'franchise-add-sprite-sm.png';
+@man-three-active-sm: 137px 43px -137px -43px 49px 54px 284px 226px 'franchise-add-sprite-sm.png' 'man-three-active-sm';
+@man-three-sm-name: 'man-three-sm';
+@man-three-sm-x: 78px;
+@man-three-sm-y: 67px;
+@man-three-sm-offset-x: -78px;
+@man-three-sm-offset-y: -67px;
+@man-three-sm-width: 49px;
+@man-three-sm-height: 54px;
+@man-three-sm-total-width: 284px;
+@man-three-sm-total-height: 226px;
+@man-three-sm-image: 'franchise-add-sprite-sm.png';
+@man-three-sm: 78px 67px -78px -67px 49px 54px 284px 226px 'franchise-add-sprite-sm.png' 'man-three-sm';
+@man-two-active-sm-name: 'man-two-active-sm';
+@man-two-active-sm-x: 0px;
+@man-two-active-sm-y: 172px;
+@man-two-active-sm-offset-x: 0px;
+@man-two-active-sm-offset-y: -172px;
+@man-two-active-sm-width: 33px;
+@man-two-active-sm-height: 54px;
+@man-two-active-sm-total-width: 284px;
+@man-two-active-sm-total-height: 226px;
+@man-two-active-sm-image: 'franchise-add-sprite-sm.png';
+@man-two-active-sm: 0px 172px 0px -172px 33px 54px 284px 226px 'franchise-add-sprite-sm.png' 'man-two-active-sm';
+@man-two-sm-name: 'man-two-sm';
+@man-two-sm-x: 200px;
+@man-two-sm-y: 88px;
+@man-two-sm-offset-x: -200px;
+@man-two-sm-offset-y: -88px;
+@man-two-sm-width: 33px;
+@man-two-sm-height: 54px;
+@man-two-sm-total-width: 284px;
+@man-two-sm-total-height: 226px;
+@man-two-sm-image: 'franchise-add-sprite-sm.png';
+@man-two-sm: 200px 88px -200px -88px 33px 54px 284px 226px 'franchise-add-sprite-sm.png' 'man-two-sm';
+@money-sm-name: 'money-sm';
+@money-sm-x: 78px;
+@money-sm-y: 0px;
+@money-sm-offset-x: -78px;
+@money-sm-offset-y: 0px;
+@money-sm-width: 59px;
+@money-sm-height: 67px;
+@money-sm-total-width: 284px;
+@money-sm-total-height: 226px;
+@money-sm-image: 'franchise-add-sprite-sm.png';
+@money-sm: 78px 0px -78px 0px 59px 67px 284px 226px 'franchise-add-sprite-sm.png' 'money-sm';
+@questions-title-sm-name: 'questions-title-sm';
+@questions-title-sm-x: 247px;
+@questions-title-sm-y: 180px;
+@questions-title-sm-offset-x: -247px;
+@questions-title-sm-offset-y: -180px;
+@questions-title-sm-width: 34px;
+@questions-title-sm-height: 44px;
+@questions-title-sm-total-width: 284px;
+@questions-title-sm-total-height: 226px;
+@questions-title-sm-image: 'franchise-add-sprite-sm.png';
+@questions-title-sm: 247px 180px -247px -180px 34px 44px 284px 226px 'franchise-add-sprite-sm.png' 'questions-title-sm';
+@success-title-sm-name: 'success-title-sm';
+@success-title-sm-x: 200px;
+@success-title-sm-y: 0px;
+@success-title-sm-offset-x: -200px;
+@success-title-sm-offset-y: 0px;
+@success-title-sm-width: 47px;
+@success-title-sm-height: 43px;
+@success-title-sm-total-width: 284px;
+@success-title-sm-total-height: 226px;
+@success-title-sm-image: 'franchise-add-sprite-sm.png';
+@success-title-sm: 200px 0px -200px 0px 47px 43px 284px 226px 'franchise-add-sprite-sm.png' 'success-title-sm';
+@volume-sm-name: 'volume-sm';
+@volume-sm-x: 0px;
+@volume-sm-y: 0px;
+@volume-sm-offset-x: 0px;
+@volume-sm-offset-y: 0px;
+@volume-sm-width: 78px;
+@volume-sm-height: 65px;
+@volume-sm-total-width: 284px;
+@volume-sm-total-height: 226px;
+@volume-sm-image: 'franchise-add-sprite-sm.png';
+@volume-sm: 0px 0px 0px 0px 78px 65px 284px 226px 'franchise-add-sprite-sm.png' 'volume-sm';
+@world-sm-name: 'world-sm';
+@world-sm-x: 0px;
+@world-sm-y: 65px;
+@world-sm-offset-x: 0px;
+@world-sm-offset-y: -65px;
+@world-sm-width: 66px;
+@world-sm-height: 69px;
+@world-sm-total-width: 284px;
+@world-sm-total-height: 226px;
+@world-sm-image: 'franchise-add-sprite-sm.png';
+@world-sm: 0px 65px 0px -65px 66px 69px 284px 226px 'franchise-add-sprite-sm.png' 'world-sm';
+@spritesheet-width: 284px;
+@spritesheet-height: 226px;
+@spritesheet-image: 'franchise-add-sprite-sm.png';
+@spritesheet-sprites: @adv-buyer-sm @adv-experience-sm @adv-professional-sm @adv-site-sm @adv-term-sm @arrow-left-sm @arrow-right-sm @benefit-title-sm @examples-title-sm @hand-sm @location-title-sm @man-one-active-sm @man-one-sm @man-three-active-sm @man-three-sm @man-two-active-sm @man-two-sm @money-sm @questions-title-sm @success-title-sm @volume-sm @world-sm;
+@spritesheet: 284px 226px 'franchise-add-sprite-sm.png' @spritesheet-sprites;
+
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.sprite-width(@sprite) {
+  width: extract(@sprite, 5);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 6);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 3);
+  @sprite-offset-y: extract(@sprite, 4);
+  background-position: @sprite-offset-x @sprite-offset-y;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: extract(@sprite, 9);
+  @sprite-image-bare: ~`"@{sprite-image}".slice(1, -1)`;
+  background-image: url(@sprite-image-bare);
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+.sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
+  @sprite: extract(@sprites, @i);
+  @sprite-name: e(extract(@sprite, 10));
+  .@{sprite-name} {
+    .sprite(@sprite);
+  }
+  .sprites(@sprites, @i + 1);
+}

@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <script>
+        if (screen.width < '480') {
+            document.write('<meta name="viewport" content="width=480">');
+        } else {
+            document.write('<meta name="viewport" content="width=device-width; initial-scale=1.0">');
+        }
+    </script>
+    <script src="vendor/ie/picturefill.min.js" async></script>
+    <title>Продай бизнес</title>
+    <!--[if lt IE 9]>
+    <script src="vendor/ie/html5shiv.min.js"></script>
+  <![endif]-->
+
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="css/style_ie.min.css">
+  <![endif]-->
+
+</head>
+
+<body>
+    <!-- Yandex.Metrika counter <script></script>-->
+    <div class="offer offer--top">
+        <span class="offer__close">закрыть рекламу <i class="fa fa-close"></i></span>
+        <!-- noindex -->
+        <a href="#" rel="nofollow" target="_blank" title="Нажми меня">
+            <picture>
+                <source media="(max-width:650px)" srcset="img/promo/top_small.jpg">
+                <source media="(max-width:985px)" srcset="img/promo/top_middle.jpg">
+                <img src="img/promo/top_big.jpg" alt="">
+            </picture>
+        </a>
+        <!--/ noindex -->
+        <!--
+      <img src="img/promo/count.gif" alt="">
+      -->
+    </div>
+    <header class="main-header">
+
+        <div class="main-header__info main-header__info--toggle">
+            <div class="main-header__container">
+                <div class="main-header__info-wrp">
+                    <div class="main-header__location">
+                        <span>Регион:</span>
+                        <select name="location" id="location" class="main-header__select">
+              <option value="Moscow">Москва и МО</option>
+              <option value="Petersburg">СПб и ЛО</option>
+              <option value="Russia">Вся Россия</option>
+            </select>
+                    </div>
+                    <div class="main-header__toggle"><i class="fa fa-navicon"></i></div>
+
+                    <div class="main-header__today">
+                        Сегодня на сайте:
+                        <span class="main-header__counter">5000</span> франшиз
+                    </div>
+                    <div class="main-header__mob-phone">
+                        <i class="fa fa-phone"></i> +7 (495) 374-67-07
+                    </div>
+                    <div class="main-header__control">
+                        <a href="#" onclick="addBookmarku(); return false"><i class="fa fa-star"></i> Избранное</a>
+                        <a href="#"><i class="fa fa-user"></i> Кабинет</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-header__content">
+            <div class="main-header__container">
+                <div class="main-header__content-wrp">
+                    <div class="main-header__logo">
+                        <a href="#">
+                            <div class="main-header__logo-wrp"><img src="img/logo.png" width="245" alt=""></div>
+                            <span>www.продажа-бизнеса.рф</span>
+                        </a>
+
+                    </div>
+
+                    <div class="main-header__advantages">
+                        <div class="main-header__advantage-items">
+                            <div class="main-header__advantage-item main-header__advantage-item--first">
+                                <i class="fa fa-briefcase"></i>
+                                <p>Самая большая и <span>актуальная база</span> объектов!</p>
+                            </div>
+                            <div class="main-header__advantage-item">
+                                <i class="fa fa-binoculars"></i>
+                                <p>Мы знаем истории всех объектов <span>с 2009 года</span>!
+                                </p>
+                            </div>
+                            <div class="main-header__advantage-item">
+                                <p><i class="fa fa-balance-scale"></i> Мы работаем открыто, <span>без&nbsp;скрытых коммисий</span>!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="main-header__links">
+                            <a href="#" class="main-header__link main-header__link--left">Добавить франшизу</a>
+                            <a href="#" class="main-header__link">Создать франшизу</a>
+                        </div>
+                    </div>
+
+                    <div class="main-header__contacts">
+                        <div class="main-header__contact main-header__contact--phone">
+                            <i class="fa fa-phone"></i>
+                            <span class="main-header__contact-content">+7 (495) 374-67-07</span>
+                            <span class="main-header__contact-content">+7 (495) 999-37-10</span>
+                        </div>
+                        <div class="main-header__contact main-header__contact--email">
+                            <a href="mailto:info@proday-biznes.ru">
+                                <i class="fa fa-envelope-o"></i>
+                                <span class="main-header__contact-content">info@proday-biznes.ru</span>
+                            </a>
+                        </div>
+                        <div class="main-header__contact main-header__contact--time">
+                            <i class="fa fa-clock-o"></i>
+                            <span class="main-header__contact-content">с 10 до 22<br>(без выходных)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-header__nav">
+            <div class="main-header__container">
+                <nav class="main-nav">
+                    <ul class="main-nav__menu">
+                        <li class="main-nav__item"><a href="#">ПРОДАЖА БИЗНЕСА</a></li>
+                        <li class="main-nav__item"><a href="#">ЗАЯВКИ ОТ ПОКУПАТЕЛЕЙ</a></li>
+                        <li class="main-nav__item"><a href="#">КАТАЛОГ ФРАНШИЗ</a></li>
+                        <li class="main-nav__item"><a href="#">ОЦЕНКА БИЗНЕСА</a></li>
+                        <li class="main-nav__item"><a href="#">О КОМПАНИИ</a></li>
+                        <li class="main-nav__item"><a href="#">КОНТАКТЫ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+    </header>
+
+    <main class="main-content">
+        <div class="main-content__container">
+            <div class="main-content__left">
+                <section class="franchise-area">
+                    <h4 class="franchise-area__title">Направления франшиз</h4>
+                    <ul class="franchise-area__items">
+                        <li class="franchise-area__item franchise-area__item--restaurant"><a href="#">Сфера общепита</a></li>
+                        <li class="franchise-area__item franchise-area__item--business"><a href="#">Услуги для бизнеса</a></li>
+                        <li class="franchise-area__item franchise-area__item--people"><a href="#">Услуги населению</a></li>
+                        <li class="franchise-area__item franchise-area__item--children"><a href="#">Детские франшизы</a></li>
+                        <li class="franchise-area__item franchise-area__item--production"><a href="#">Производства</a></li>
+                        <li class="franchise-area__item franchise-area__item--beauty"><a href="#">Салоны красоты</a></li>
+                        <li class="franchise-area__item franchise-area__item--fitness"><a href="#">Фитнес-клубы</a></li>
+                        <li class="franchise-area__item franchise-area__item--medicine"><a href="#">Медицина и здоровье</a></li>
+                        <li class="franchise-area__item franchise-area__item--education"><a href="#">Обучение и образование</a></li>
+                        <li class="franchise-area__item franchise-area__item--treat"><a href="#">Отдых и развлечения</a></li>
+                        <li class="franchise-area__item franchise-area__item--tourism"><a href="#">Туризм</a></li>
+                        <li class="franchise-area__item franchise-area__item--auto"><a href="#">Автобизнес</a></li>
+                        <li class="franchise-area__item franchise-area__item--hotel"><a href="#">Гостиничный бизнес</a></li>
+                        <li class="franchise-area__item franchise-area__item--internet"><a href="#">Интернет и связь</a></li>
+                        <li class="franchise-area__item franchise-area__item--adv"><a href="#">Издательства и реклама</a></li>
+                        <li class="franchise-area__item franchise-area__item--realty"><a href="#">Агентства недвижимости</a></li>
+                        <li class="franchise-area__item franchise-area__item--building"><a href="#">Строительство и ремонт</a></li>
+                        <li class="franchise-area__item franchise-area__item--shoes"><a href="#">Одежда и обувь</a></li>
+                        <li class="franchise-area__item franchise-area__item--food"><a href="#">Продукты питания</a></li>
+                        <li class="franchise-area__item franchise-area__item--accessories"><a href="#">Аксессуары и галантерея</a></li>
+                        <li class="franchise-area__item franchise-area__item--furniture"><a href="#">Мебель и интерьер</a></li>
+                        <li class="franchise-area__item franchise-area__item--retail"><a href="#">Розничная торговля</a></li>
+                        <li class="franchise-area__item franchise-area__item--new"><a href="#">НОВЫЕ ФРАНШИЗЫ</a></li>
+                        <li class="franchise-area__item franchise-area__item--all"><a href="#">ВСЕ ФРАНШИЗЫ</a></li>
+                    </ul>
+                </section>
+                <div class="left-sticky">
+                    <article class="subscribe">
+                        <h3 class="subscribe__title">Новости франчайзинга</h3>
+                        <p class="subscribe__exp">Только для наших подписчиков</p>
+                        <form action="/" method="POST" name="subscribe">
+                            <div class="subscribe__input-wrp">
+                                <input class="subscribe__input" type="text" name="name" placeholder="Ваше имя?">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <div class="subscribe__input-wrp">
+                                <input class="subscribe__input" type="text" name="email" placeholder="Ваш email?">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="subscribe__btn-wrp">
+                                <button type="submit" class="subscribe__btn">Подписаться</button>
+                            </div>
+                        </form>
+                    </article>
+
+                    <div class="offer offer--left">
+                        <!-- noindex -->
+                        <a href="#" rel="nofollow" target="_blank">
+                            <img src="img/promo/left.jpg" alt="">
+                        </a>
+                        <!--/noindex-->
+
+                        <!--
+              <img src="img/promo/count.gif" alt="">
+            -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-content__center main-content__center--franchise">
+
+                <nav class="breadcrumbs">
+                    <i class="fa fa-arrow-right"></i>
+                    <ul class="breadcrumbs__menu">
+                        <li class="breadcrumbs__item"><a href="#">Продажа бизнеса <i class="fa fa-angle-right"></i></a></li>
+                        <li class="breadcrumbs__item"><a href="#">Каталог франшиз <i class="fa fa-angle-right"></i></a></li>
+                        <li class="breadcrumbs__item"><a href="#">Детские франшизы</a></li>
+
+                    </ul>
+                </nav>
+                <div class="main-content__white-wrp">
+                    <div class="franchise">
+                        <h1 class="franchise__title">ФРАНШИЗА ДЕТСКИХ МАГАЗИНОВ-СТУДИЙ «ОРАНЖЕВЫЙ СЛОН»
+              <a class="franchise__print" href="javascript:window.print();"><i class="fa fa-print"></i> Версия для печати</a>
+            </h1>
+                        <div class="franchise__first-row">
+                            <div class="franchise-photos">
+                                <div class="franchise-photos__jcarousel-wrapper">
+                                    <div class="franchise-photos__jcarousel">
+                                        <ul class="franchise-photos__items">
+                                            <li class="franchise-photos__item">
+                                                <img src="img/franchise/franchise-photo.jpg" width="540" height="405" alt="">
+                                                <span class="franchise-photos__info franchise-photos__info--invest">Инвестиции от: 2 500 000 руб</span>
+                                                <span class="franchise-photos__info franchise-photos__info--payback">Окупаемость от: 12 мес</span>
+                                            </li>
+                                            <li class="franchise-photos__item">
+                                                <img src="img/franchise/franchise-photo.jpg" width="540" height="405" alt="">
+                                                <span class="franchise-photos__info franchise-photos__info--invest">Инвестиции от: 2 500 000 руб</span>
+                                                <span class="franchise-photos__info franchise-photos__info--payback">Окупаемость от: 12 мес</span>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+                                    <a href="#" class="franchise-photos__prev">&lsaquo;</a>
+                                    <a href="#" class="franchise-photos__next">&rsaquo;</a>
+                                    <p class="franchise-photos__pagination"> </p>
+                                </div>
+
+                            </div>
+                            <div class="franchise-intro">
+                                <div class="franchise-intro__content">
+                                    <div class="franchiser__logo-wrp">
+                                        <img class="franchise-intro__logo" src="img/franchise/franchise_1.png" alt="" width="150" height="150">
+                                    </div>
+                                    <div class="franchise-intro__franchiser">
+                                        <div class="franchiser franchiser--left">
+
+                                            <img class="franchiser__img" src="img/franchise/franchiser.png" alt="" width="50" height="50">
+
+                                            <div class="franchiser__info">
+                                                <p class="franchiser__name">Дарья Уакина</p>
+                                                <p class="franchiser__position"> представитель компании
+                                                    <span class="fracnhiser__online">online</span>
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="franchise-intro__link" id="connect-link" href="#">Связаться с франчайзером</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <section class="describe describe--paddingsm">
+                            <div class="describe__franchise-info">
+                                <h2 class="describe__title">ИНФОРМАЦИЯ О ФРАНЧАЙЗЕРЕ</h2>
+                                <p class="describe__item">
+                                    Франчайзинг представляет собой смешанную форму крупного и малого бизнеса, при которой владельцы определенных брендов и торговых марок (франчайзеры) предоставляют другим организациям и предпринимателям (франчайзи) возможность воспользоваться своим зарегистрированным
+                                    именем. При этом франчайзеры оставляют за собой право по выбору формы ведения бизнеса для франчайзи. Все необходимые условия прописываются в договоре. Преимуществом заключения подобных сделок является поддержка предпринимательства,
+                                    снабжение необходимыми товарами, технологиями.
+                                </p>
+                            </div>
+                            <div class="describe__franchise-info">
+                                <h2 class="describe__title">ИНФОРМАЦИЯ О ФРАНШИЗЕ</h2>
+                                <p class="describe__item">
+                                    Магазин франшиз «Биржа Бизнеса» предлагает широкий спектр услуг по франчайзингу для предпринимателей Москвы и Московской области. Потенциальным покупателям предоставляется возможность выбрать наиболее подходящие для себя товары и услуги ? от розничной
+                                    торговли детскими товарами и продуктами питания до услуг по строительству и ремонту.
+                                </p>
+                            </div>
+                            <div class="describe__franchise-info describe__franchise-info--pdf">
+                                <h2 class="describe__title">ПРЕЗЕНТАЦИЯ ФРАНШИЗЫ</h2>
+                                <a class="describe__download" href="#" target="_blank" download=""><i class="fa fa-file-pdf-o"></i> Скачать PDF презентацию франшизы</a>
+                            </div>
+                            <div class="describe__franchise-info describe__franchise-info--video">
+                                <h2 class="describe__title">ВИДЕОПРЕЗЕНТАЦИЯ ФРАНШИЗЫ</h2>
+                                <div class="describe__video">
+                                    <div class="youtube" id="M7lc1UVf-VE">
+                                        <img src="img/franchise/youtube.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="describe__franchise-info">
+                                <h2 class="describe__title">ОБУЧЕНИЕ И ПОДДЕРЖКА</h2>
+                                <p class="describe__item">
+                                    Магазин франшиз «Биржа Бизнеса» предлагает широкий спектр услуг по франчайзингу для предпринимателей Москвы и Московской области. Потенциальным покупателям предоставляется возможность выбрать наиболее подходящие для себя товары и услуги ? от розничной
+                                    торговли детскими товарами и продуктами питания до услуг по строительству и ремонту.
+                                </p>
+                            </div>
+                            <div class="describe__franchise-info">
+                                <h2 class="describe__title">ТРЕБОВАНИЯ К ФРАНЧАЙЗИ</h2>
+
+                                <ul class="describe__list">
+                                    <li><i class="fa fa-angle-right"></i> Наличие собственных или арендованных на длительный срок торговых площадей: 6 - 30 кв. м.</li>
+                                    <li><i class="fa fa-angle-right"></i> Наличие собственных или арендованных на длительный срок торговых площадей: 6 - 30 кв. м.</li>
+                                    <li><i class="fa fa-angle-right"></i> Наличие собственных или арендованных на длительный срок торговых площадей: 6 - 30 кв. м.</li>
+                                    <li><i class="fa fa-angle-right"></i> Наличие собственных или арендованных на длительный срок торговых площадей: 6 - 30 кв. м.</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="franchise-question">
+                            <form action="/" method="post" class="franchise-question__form" name="franchise-question">
+                                <h2 class="franchise-question__title">Задайте здесь <span>вопросы франчайзеру!</span></h2>
+                                <div class="franchise-question__content">
+                                    <div class="franchise-question__inputs">
+                                        <div class="franchise-question__input-wrp">
+                                            <input class="franchise-question__input" type="text" placeholder="Введите Ваше имя?" name="name">
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                        <div class="franchise-question__input-wrp">
+                                            <input class="franchise-question__input" type="text" placeholder="Введите Ваш телефон?" name="phone">
+                                            <i class="fa fa-phone"></i>
+                                        </div>
+                                        <div class="franchise-question__input-wrp">
+                                            <input class="franchise-question__input" type="text" placeholder="Введите Ваш e-mail?" name="email">
+                                            <i class="fa fa-envelope"></i>
+                                        </div>
+                                    </div>
+                                    <div class="franchise-question__textarea-wrp">
+                                        <textarea class="franchise-question__textarea" name="message" cols="30" rows="6" placeholder="Напишите здесь свои вопросы"></textarea>
+                                    </div>
+                                    <div class="franchise-question__person">
+                                        <p>Вам на них ответит:</p>
+                                        <div class="franchiser">
+                                            <img class="franchiser__img" src="img/franchise/franchiser.png" width="60" height="60" alt="">
+                                            <p class="franchiser__name">Дарья Уакина</p>
+                                            <p class="franchiser__position">
+                                                представитель компании
+                                                <span class="fracnhiser__online fracnhiser__online--bottom">online</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="franchise-question__btn" type="submit">Задать вопрос</button>
+                            </form>
+
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="main-content__right">
+                <article class="franchise-info">
+                    <h3 class="franchise-info__title">Краткая информация</h3>
+                    <div class="franchise-info__items">
+                        <p class="franchise-info__item">
+                            <span class="franchise-info__name">Основная деятельность:</span>
+                            <span class="franchise-info__detail">Детские товары и услуги</span>
+                        </p>
+                        <p class="franchise-info__item">
+                            <span class="franchise-info__name">Основные товары и услуги:</span>
+                            <span class="franchise-info__detail">наборы для творчества и хобби, подарки детям</span>
+                        </p>
+                    </div>
+                    <div class="franchise-info__facts">
+                        <div class="franchise-info__fact">
+                            <div class="franchise-info__number">1999</div>
+                            <div class="franchise-info__expl">год основания компании</div>
+                        </div>
+                        <div class="franchise-info__fact">
+                            <div class="franchise-info__number">1999</div>
+                            <div class="franchise-info__expl">год запуска франшизы</div>
+                        </div>
+                        <div class="franchise-info__fact">
+                            <div class="franchise-info__number">199</div>
+                            <div class="franchise-info__expl">собственных предприятий</div>
+                        </div>
+                        <div class="franchise-info__fact">
+                            <div class="franchise-info__number">29</div>
+                            <div class="franchise-info__expl">франшизных предприятий</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="franchise-finance">
+                    <h3 class="franchise-finance__title">Финансы</h3>
+                    <div class="franchise-finance__items">
+                        <p class="franchise-finance__item">
+                            <span class="franchise-finance__name">Первоначальный взнос:</span>
+                            <span class="franchise-finance__data">325 000 рублей</span>
+                        </p>
+                        <p class="franchise-finance__item">
+                            <span class="franchise-finance__name">Роялти:</span>
+                            <span class="franchise-finance__data">10 000 рублей в месяц</span>
+                        </p>
+                        <p class="franchise-finance__item">
+                            <span class="franchise-finance__name">Рекламные платежи:</span>
+                            <span class="franchise-finance__data">нет</span>
+                        </p>
+                        <p class="franchise-finance__item">
+                            <span class="franchise-finance__name">Иные платежи:</span>
+                            <span class="franchise-finance__data">нет</span>
+                        </p>
+                        <p class="franchise-finance__item">
+                            <span class="franchise-finance__name">Инвестиции:</span>
+                            <span class="franchise-finance__data">от 2 500 000 рублей</span>
+                        </p>
+                        <p class="franchise-finance__item">
+                            <span class="franchise-finance__name">Срок окупаемости:</span>
+                            <span class="franchise-finance__data">от 9 до 24 месяцев</span>
+                        </p>
+                    </div>
+
+                    <div class="franchise-finance__award">
+                        <div class="franchise-finance__award-wrp">
+                            <a href="#">НАГРАДЫ</a>
+                        </div>
+                        <div class="franchise-finance__award-wrp">
+                            <a href="#">РЕЙТИНГ</a>
+                        </div>
+                    </div>
+
+                    <div class="franchise-finance__views">
+                        Просмотров: <span>7000</span>
+                    </div>
+
+                    <div class="franchise-finance__details">
+                        <div class="franchise-finance__details-content">
+                            <a href="#">Интервью с руководителем</a>
+                            <a href="#">Новости компании</a>
+                        </div>
+                    </div>
+
+                    <div class="franchise-finance__links">
+
+                        <a href="#" class="franchise-finance__link">Перейти на сайт компании</a>
+                        <a href="#" class="franchise-finance__link franchise-finance__link--bold" id="report-link">Оставить заявку</a>
+
+                    </div>
+
+                </article>
+
+                <div class="right-sticky">
+                    <article class="franchise-slider franchise-slider--top">
+                        <h3 class="franchise-slider__title">Топ выгодных франшиз</h3>
+                        <div class="franchise-slider__sliderDiv">
+                            <div class="franchise-slider__jcarousel-wrapper">
+                                <div class="franchise-slider__jcarousel">
+                                    <ul class="franchise-slider__items">
+                                        <li class="franchise-slider__item">
+                                            <a href="#">
+                                                <img src="img/franchise/franchise_1.png" width="170" height="170" alt="">
+                                                <span class="franchise-slider__price">от 2 500 000 <i class="fa fa-rub"></i></span>
+                                            </a>
+                                            <a href="#">
+                                                <img src="img/franchise/franchise_2.png" width="170" height="170" alt="">
+                                                <span class="franchise-slider__price">от 2 500 000 <i class="fa fa-rub"></i></span>
+
+                                            </a>
+                                        </li>
+                                        <li class="franchise-slider__item">
+                                            <a href="#">
+                                                <img src="img/franchise/franchise_3.png" width="170" height="170" alt="">
+                                                <span class="franchise-slider__price">от 2 500 000 <i class="fa fa-rub"></i></span>
+                                            </a>
+                                            <a href="#">
+                                                <img src="img/franchise/franchise_4.png" width="170" height="170" alt="">
+                                                <span class="franchise-slider__price">от 2 500 000 <i class="fa fa-rub"></i></span>
+                                            </a>
+                                        </li>
+                                        <li class="franchise-slider__item">
+                                            <a href="#">
+                                                <img src="img/franchise/franchise_5.png" width="170" height="170" alt="">
+                                                <span class="franchise-slider__price">от 2 500 000 <i class="fa fa-rub"></i></span>
+
+                                            </a>
+                                            <a href="#">
+                                                <img src="img/franchise/franchise_6.png" width="170" height="170" alt="">
+                                                <span class="franchise-slider__price">от 2 500 000 <i class="fa fa-rub"></i></span>
+                                            </a>
+                                        </li>
+                                        <li class="franchise-slider__item">
+                                            <a href="#">
+                                                <img src="img/franchise/franchise_1.png" width="170" height="170" alt="">
+                                                <span class="franchise-slider__price">от 2 500 000 <i class="fa fa-rub"></i></span>
+
+                                            </a>
+                                            <a href="#">
+                                                <img src="img/franchise/franchise_2.png" width="170" height="170" alt="">
+                                                <span class="franchise-slider__price">от 2 500 000 <i class="fa fa-rub"></i></span>
+
+                                            </a>
+                                        </li>
+                                        <li class="franchise-slider__item">
+                                            <a href="#">
+                                                <img src="img/franchise/franchise_3.png" width="170" height="170" alt="">
+                                                <span class="franchise-slider__price">от 2 500 000 <i class="fa fa-rub"></i></span>
+                                            </a>
+                                            <a href="#">
+                                                <img src="img/franchise/franchise_4.png" width="170" height="170" alt="">
+                                                <span class="franchise-slider__price">от 2 500 000 <i class="fa fa-rub"></i></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <a href="#" class="franchise-slider__prev">&lsaquo;</a>
+                                <a href="#" class="franchise-slider__next">&rsaquo;</a>
+                                <p class="franchise-slider__pagination"> </p>
+                            </div>
+                        </div>
+                    </article>
+                    <div class="offer offer--right">
+                        <!-- noindex -->
+                        <a href="#" rel="nofollow" target="_blank">
+                            <img src="img/promo/right.jpg" alt="">
+                        </a>
+                        <!-- /noindex> -->
+                        <!--
+              <img src="img/promo/count.gif" alt="">
+            -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="main-footer__container">
+            <div class="main-footer__first-row">
+                <div class="main-footer__social">
+                    <div class="main-footer__logo">
+                        <a href="#"><img class="main-footer__logo-img" src="img/logo.png" width="250" alt=""></a>
+                    </div>
+                    <div class="main-footer__social-btns">
+                        <p>Биржа Бизнеса в соцсетях:</p>
+                        <!-- noindex -->
+                        <a rel="nofollow" target="_blank" href="https://vk.com/prodaybiznes" class="main-footer__social-btn"><i class="fa fa-vk"></i></a>
+                        <!-- /noindex -->
+                        <!-- noindex -->
+                        <a rel="nofollow" target="_blank" href="#" class="main-footer__social-btn"><i class="fa fa-facebook-official"></i></a>
+                        <!-- /noindex -->
+                        <!-- noindex -->
+                        <a rel="nofollow" target="_blank" href="https://www.youtube.com/channel/UCGbICZF6xvhRavjPzudgc4w" class="main-footer__social-btn"><i class="fa fa-youtube"></i></a>
+                        <!-- /noindex -->
+                    </div>
+                </div>
+                <nav class="main-footer__nav">
+                    <p class="main-footer__title">Полезные ссылки</p>
+                    <ul class="main-footer__menu">
+                        <li><a href="#">Реклама на сайте</a></li>
+                        <li><a href="#">Правила пользования</a></li>
+                        <li><a href="#">Карта сайта</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">О нас</a></li>
+                    </ul>
+                </nav>
+                <div class="main-footer_contacts">
+                    <div class="main-footer__phones">
+                        <p class="main-footer__title">Телефоны поддержки</p>
+                        <ul class="main-footer__phone-items">
+                            <li>+7 (495) 374-67-07</li>
+                            <li>+7 (495) 999-37-10</li>
+                        </ul>
+                    </div>
+                    <div class="main-footer__shedule">
+                        <p class="main-footer__title">Рабочие часы</p>
+                        <p>с 10-00 до 20-00 без выходных</p>
+                    </div>
+                </div>
+                <div class="main-footer__help">
+                    <p class="main-footer__title">Нужна помощь?</p>
+                    <p>У Вас возникли вопросы или предложения? Напишите нам</p>
+                    <button class="main-footer__btn" id="report">Связаться с нами</button>
+                </div>
+            </div>
+            <div class="main-footer__second-row">
+                <div class="main-footer__offer">Предоставленные данные на сайте имеют информационный характер и ни при каких условиях не являются публичной офертой, определяемой положениями Статьи 437 ГК.</div>
+                <div class="main-footer__copyright">© 2009-2016. "Биржа Бизнеса" - продажа и покупка готового бизнеса</div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="up-btn" id="up-btn"><i class="fa fa-arrow-up"></i></div>
+    <div class="popup-report__overlay">
+        <div class="popup-report">
+            `
+            <div class="popup-report__bg"></div>
+            <div class="popup-report__close">x</div>
+            <h3 class="popup-report__title">Связаться с администрацией</h3>
+            <form class="popup-report__form" method="POST" action="/" name="report">
+                <div class="popup-report__wrapper popup-report__required">
+                    <label for="report-name"><i class="fa fa-user"></i></label>
+                    <input class="popup-report__input" type="text" name="name" id="report-name" placeholder="Как Вас зовут">
+                </div>
+                <div class="popup-report__wrapper popup-report__required">
+                    <label for="report-phone"><i class="fa fa-phone"></i></label>
+                    <input class="popup-report__input" type="text" name="phone" id="report-phone" placeholder="Ваш номер телефона">
+                </div>
+                <div class="popup-report__wrapper popup-report__required">
+                    <label for="report-email"><i class="fa fa-envelope"></i></label>
+                    <input class="popup-report__input" type="text" name="email" id="report-email" placeholder="Ваш email?">
+                </div>
+                <div class="popup-report__msg-wrapper">
+                    <textarea class="popup-report__message" name="message_order" id="report-message" cols="30" rows="6" placeholder="Напишите здесь свой вопрос или свои предложения"></textarea>
+                </div>
+                <button class="popup-report__btn" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <div class="popup-franchise__overlay">
+        <div class="popup-franchise" id="connect-franchiser">
+            <div class="popup-franchise__franchiser">
+                <h3 class="popup-franchise__title popup-franchise__title--small">
+        Франчайзер:
+      </h3>
+                <div class="franchiser">
+                    <img class="franchiser__img" src="img/franchise/franchiser.png" alt="" width="50" height="50">
+                    <div class="franchiser__info">
+                        <p class="franchiser__name">Дарья Уакина</p>
+                        <p class="franchiser__position"> представитель компании</p>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-franchise__form-wrp">
+                <h3 class="popup-franchise__title">
+        Связаться с франчайзером
+      </h3>
+                <div class="popup-franchise__close">x</div>
+                <p class="popup-franchise__exp">
+                    Заполните поля и франчайзер ответит вам на&nbsp;почту или по телефону:
+                </p>
+                <form action="/" method="post" name="franchiser-connect" class="popup-franchise__form">
+                    <div class="popup-franchise__input-wrp">
+                        <input class="popup-franchise__input" type="text" placeholder="Введите Ваше имя?" name="name">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="popup-franchise__input-wrp">
+                        <input class="popup-franchise__input" type="text" placeholder="Введите Ваш телефон?" name="phone">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <div class="popup-franchise__input-wrp">
+                        <input class="popup-franchise__input" type="text" placeholder="Введите Ваш e-mail?" name="email">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+
+                    <textarea class="popup-franchise__textarea" name="message" cols="30" rows="8" placeholder="Ваше сообщение"></textarea>
+
+                    <button class="popup-franchise__btn" type="submit">Отправить сообщение <i class="fa fa-send"></i></button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="popup-franchise__overlay">
+        <div class="popup-franchise" id="franchise-report">
+            <div class="popup-franchise__franchiser">
+                <h3 class="popup-franchise__title popup-franchise__title--small">
+        Франчайзер:
+      </h3>
+                <div class="franchiser">
+                    <img class="franchiser__img" src="img/franchise/franchiser.png" alt="" width="50" height="50">
+                    <div class="franchiser__info">
+                        <p class="franchiser__name">Дарья Уакина</p>
+                        <p class="franchiser__position"> представитель компании</p>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-franchise__form-wrp">
+                <h3 class="popup-franchise__title">
+        Оставить заявку
+      </h3>
+                <div class="popup-franchise__close">x</div>
+                <p class="popup-franchise__exp">
+                    Заполните поля и франчайзер ответит вам на&nbsp;почту или по телефону:
+                </p>
+                <form action="/" method="post" name="franchiser-report" class="popup-franchise__form">
+                    <div class="popup-franchise__input-wrp">
+                        <input class="popup-franchise__input" type="text" placeholder="Введите Ваше имя?" name="name">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="popup-franchise__input-wrp">
+                        <input class="popup-franchise__input" type="text" placeholder="Введите Ваш телефон?" name="phone">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <div class="popup-franchise__input-wrp">
+                        <input class="popup-franchise__input" type="text" placeholder="Введите Ваш e-mail?" name="email">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+
+                    <textarea class="popup-franchise__textarea" name="message" cols="30" rows="8" placeholder="Ваше сообщение"></textarea>
+
+                    <button class="popup-franchise__btn" type="submit">Отправить сообщение <i class="fa fa-send"></i></button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="franchise-documents">
+
+        <form class="franchise-documents__form" action="/" method="post" name="documents-request">
+            <div class="franchise-documents__content">
+                <img class="franchise-documents__logo" src="img/franchise/franchise_1.png" alt="" width="50" height="50">
+                <div class="franchise-documents__input-wrp">
+                    <input class="franchise-documents__input" name="name" type="text" placeholder="Введите Ваше имя?">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="franchise-documents__input-wrp">
+                    <input class="franchise-documents__input" name="phone" type="text" placeholder="Введите Ваш телефон?">
+                    <i class="fa fa-phone"></i>
+                </div>
+                <div class="franchise-documents__input-wrp">
+                    <input class="franchise-documents__input" name="email" type="text" placeholder="Введите Ваш e-mail?">
+                    <i class="fa fa-envelope"></i>
+                </div>
+
+                <button class="franchise-documents__btn" type="submit">Запросить пакет документов</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="mobile-nav">
+        <div class="mobile-nav__close">
+            <i class="mobile-nav__close-toggle fa fa-navicon"></i>
+            <i class="mobile-nav__close-cross fa fa-close"></i>
+        </div>
+        <ul class="mobile-nav__content-menu">
+            <li class="mobile-nav__content-item mobile-nav__content-item--active"><a>Каталог франшиз</a></li>
+            <li class="mobile-nav__content-item"><a href="#">РЕЙТИНГ ФРАНШИЗ</a></li>
+            <li class="mobile-nav__content-item"><a href="#">СОЗДАНИЕ ФРАНШИЗЫ</a></li>
+        </ul>
+        <ul class="mobile-nav__main-nav">
+            <li class="mobile-nav__main-item"><a href="#">ПРОДАЖА БИЗНЕСА</a></li>
+            <li class="mobile-nav__main-item"><a href="#">ЗАЯВКИ ОТ ПОКУПАТЕЛЕЙ</a></li>
+            <li class="mobile-nav__main-item"><a href="#">КАТАЛОГ ФРАНШИЗ</a></li>
+            <li class="mobile-nav__main-item"><a href="#">ОЦЕНКА БИЗНЕСА</a></li>
+            <li class="mobile-nav__main-item"><a href="#">О КОМПАНИИ</a></li>
+            <li class="mobile-nav__main-item"><a href="#">КОНТАКТЫ</a></li>
+        </ul>
+        <div class="mobile-nav__franchise-area">
+            <span>Направления франшиз</span>
+            <ul class="franchise-area__items">
+                <li class="franchise-area__item franchise-area__item--restaurant"><a href="#">Сфера общепита</a></li>
+                <li class="franchise-area__item franchise-area__item--business"><a href="#">Услуги для бизнеса</a></li>
+                <li class="franchise-area__item franchise-area__item--people"><a href="#">Услуги населению</a></li>
+                <li class="franchise-area__item franchise-area__item--children"><a href="#">Детские франшизы</a></li>
+                <li class="franchise-area__item franchise-area__item--production"><a href="#">Производства</a></li>
+                <li class="franchise-area__item franchise-area__item--beauty"><a href="#">Салоны красоты</a></li>
+                <li class="franchise-area__item franchise-area__item--fitness"><a href="#">Фитнес-клубы</a></li>
+                <li class="franchise-area__item franchise-area__item--medicine"><a href="#">Медицина и здоровье</a></li>
+                <li class="franchise-area__item franchise-area__item--education"><a href="#">Обучение и образование</a></li>
+                <li class="franchise-area__item franchise-area__item--treat"><a href="#">Отдых и развлечения</a></li>
+                <li class="franchise-area__item franchise-area__item--tourism"><a href="#">Туризм</a></li>
+                <li class="franchise-area__item franchise-area__item--auto"><a href="#">Автобизнес</a></li>
+                <li class="franchise-area__item franchise-area__item--hotel"><a href="#">Гостиничный бизнес</a></li>
+                <li class="franchise-area__item franchise-area__item--internet"><a href="#">Интернет и связь</a></li>
+                <li class="franchise-area__item franchise-area__item--adv"><a href="#">Издательства и реклама</a></li>
+                <li class="franchise-area__item franchise-area__item--realty"><a href="#">Агентства недвижимости</a></li>
+                <li class="franchise-area__item franchise-area__item--building"><a href="#">Строительство и ремонт</a></li>
+                <li class="franchise-area__item franchise-area__item--shoes"><a href="#">Одежда и обувь</a></li>
+                <li class="franchise-area__item franchise-area__item--food"><a href="#">Продукты питания</a></li>
+                <li class="franchise-area__item franchise-area__item--accessories"><a href="#">Аксессуары и галантерея</a></li>
+                <li class="franchise-area__item franchise-area__item--furniture"><a href="#">Мебель и интерьер</a></li>
+                <li class="franchise-area__item franchise-area__item--retail"><a href="#">Розничная торговля</a></li>
+                <li class="franchise-area__item franchise-area__item--new"><a href="#">НОВЫЕ ФРАНШИЗЫ</a></li>
+                <li class="franchise-area__item franchise-area__item--all"><a href="#">ВСЕ ФРАНШИЗЫ</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="popup-confirm__overlay">
+        <div class="popup-confirm">
+            <h3 class="popup-confirm__title">Вы действительно хотите отказаться от заявки?</h3>
+            <p class="popup-confirm__text">Если у Вас возникли вопросы,<br> позвоните нам по телефону<br> +7 (495) 374-67-07</p>
+            <div class="popup-confirm__btns">
+                <button class="popup-confirm__btn" id="confirm-yes">Да, отказаться</button>
+                <button class="popup-confirm__btn popup-confirm__btn--green" id="confirm-no">Нет, я передумал</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="vendor/jquery/jquery-1.12.4.min.js"></script>
+    <script src="vendor/jcarousel/jquery.jcarousel.min.js"></script>
+    <script src="vendor/inputmask/jquery.inputmask.bundle.min.js"></script>
+    <script src="vendor/ionSlider/ion.rangeSlider.min.js"></script>
+    <script src="vendor/sticky/jquery.sticky-kit.min.js"></script>
+
+
+    <script src="scripts/common.js"></script>
+    <script src="scripts/franchise.js"></script>
+
+
+
+
+    <!--[if lt IE 10]>
+    <script src="vendor/ie/jquery.placeholder.js"></script>
+    <script>
+      $('input').placeholder();
+    </script>
+  <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="vendor/ie/respond.js"></script>
+    <script src="scripts/ie.min.js"></script>
+  <![endif]-->
+
+</body>
+
+</html>

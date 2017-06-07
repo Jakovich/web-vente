@@ -1,0 +1,333 @@
+.create-intro {
+  background-image: url('../img/franchise/create-intro-bg-big.jpg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.create-intro__title {
+  text-align: center;
+  color: @blue-dark;
+  font-size: 40px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  
+}
+
+.create-intro__subtitle {
+  color: @green;
+  text-align: center;
+  font-size: 26px;
+  margin-top: 0;
+}
+
+.create-intro__adv {
+  margin-top: 30px;
+}
+
+.create-intro__adv-title {
+  text-align: center;
+  font-size: 24px;
+  color: #333333;
+}
+
+.create-intro__adv-items {
+  width: 810px;
+  margin: 0 auto;
+  text-align: justify;
+  position: relative;
+  line-height: 0;
+  font-size: 20px;
+  color: #404040;
+  &:after {
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    content: '';
+    display: inline-block;
+  }
+}
+
+.create-intro__adv-item {
+  text-align: center;
+  width: 250px;
+  font-size: 20px;
+  line-height: normal;
+  color: #404040;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  padding-top: 67px;
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 50%;
+    background-image: url('../img/franchise/franchise-add-sprite.png');
+  }
+}
+
+.create-intro__adv-item--money {
+  &:before {
+    width: @money-width;
+    height: @money-height;
+    margin-left: -@money-width/2;
+    background-position: @money-offset-x @money-offset-y;
+  }
+}
+
+.create-intro__adv-item--volume {
+  &:before {
+    width: @volume-width;
+    height: @volume-height;
+    margin-left: -@volume-width/2;
+    background-position: @volume-offset-x @volume-offset-y;
+  }
+}
+
+.create-intro__adv-item--world {
+  &:before {
+    width: @world-width;
+    height: @world-height;
+    margin-left: -@world-width/2;
+    background-position: @world-offset-x @world-offset-y;
+  }
+}
+
+.create-intro__form {
+  margin: 0 auto;
+  margin-top: 40px;
+  max-width: 1096px;
+  margin-bottom: 30px;
+}
+
+.create-intro__form-title {
+  text-align: center;
+  color: @blue-dark;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  position: relative;
+  &:before {
+    position: absolute;
+    content: '';
+    background-image: url('../img/franchise/franchise-add-sprite.png');
+    width: @arrow-left-width;
+    left: 60px;;
+    top: -50px;
+    height: @arrow-left-height;
+    background-position: @arrow-left-offset-x @arrow-left-offset-y;
+  }
+  &:after {
+    position: absolute;
+    content: '';
+    background-image: url('../img/franchise/franchise-add-sprite.png');
+    width: @arrow-right-width;
+    height: @arrow-right-height;
+    right: 60px;
+    top: -50px;
+    background-position: @arrow-right-offset-x @arrow-right-offset-y;
+  }
+}
+
+
+@media (max-width: 1260px) {
+  .create-intro__title {
+    font-size: 35px;
+  }
+  
+  .create-intro__subtitle {
+    font-size: 23px;
+    margin-top: 0;
+  }
+  
+  .create-intro__adv-title {
+    font-size: 22px;
+  }
+  
+  .create-intro__adv-items {
+    width: 780px;
+  }
+  
+  .create-intro__adv-item {
+    padding-top: 60px;
+    width: 220px;
+    font-size: 18px;
+  }
+  
+  .create-intro__adv-item--money {
+    &:before {
+      width: @money-md-width;
+      height: @money-md-height;
+      margin-left: -@money-md-width/2;
+      background-position: @money-md-offset-x @money-md-offset-y;
+    }
+  }
+
+  .create-intro__adv-item--volume {
+    &:before {
+      width: @volume-md-width;
+      height: @volume-md-height;
+      margin-left: -@volume-md-width/2;
+      background-position: @volume-md-offset-x @volume-md-offset-y;
+    }
+  }
+
+  .create-intro__adv-item--world {
+    &:before {
+      width: @world-md-width;
+      height: @world-md-height;
+      margin-left: -@world-md-width/2;
+      background-position: @world-md-offset-x @world-md-offset-y;
+    }
+  }
+
+  
+  .create-intro__form-title {
+    max-width: 860px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    &:before {
+      width: @arrow-left-md-width;
+      left: 30px;;
+      top: -20px;
+      height: @arrow-left-md-height;
+      background-position: @arrow-left-md-offset-x @arrow-left-md-offset-y;
+    }
+    &:after {
+      width: @arrow-right-md-width;
+      height: @arrow-right-md-height;
+      right: 30px;
+      top: -20px;
+      background-position: @arrow-right-md-offset-x @arrow-right-md-offset-y;
+    }
+  }
+}
+
+
+@media (max-width: 985px) {
+  .create-intro {
+     padding-bottom: 10px;
+    background-position: bottom center;
+  }
+  
+  .create-intro__title {
+    font-size: 24px;
+    margin-top: 20px;
+   
+  }
+  
+  .create-intro__subtitle {
+    font-size: 16px;
+  }
+  
+  .create-intro__adv-title {
+    font-size: 18px;
+  }
+  
+  .create-intro__form {
+    margin-top: 30px;
+  }
+  
+  .create-intro__adv-item {
+  
+    width: 170px;
+    font-size: 14px;
+    line-height: normal;
+    color: #404040;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    padding-top: 67px;
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 50%;
+      background-image: url('../img/franchise/franchise-add-sprite-sm.png');
+    }
+  }
+  .create-intro__adv-item--money {
+    &:before {
+      width: @money-sm-width;
+      height: @money-sm-height;
+      margin-left: -@money-sm-width/2;
+      background-position: @money-sm-offset-x @money-sm-offset-y;
+    }
+  }
+
+  .create-intro__adv-item--volume {
+    &:before {
+      width: @volume-sm-width;
+      height: @volume-sm-height;
+      margin-left: -@volume-sm-width/2;
+      background-position: @volume-sm-offset-x @volume-sm-offset-y;
+    }
+  }
+
+  .create-intro__adv-item--world {
+    &:before {
+      width: @world-sm-width;
+      height: @world-sm-height;
+      margin-left: -@world-sm-width/2;
+      background-position: @world-sm-offset-x @world-sm-offset-y;
+    }
+  }
+  
+  .create-intro__adv-items {
+    width: 600px;
+  }
+  
+  .create-intro__form-title {
+    font-size: 20px;
+    margin: 0 auto;
+    max-width: 550px;
+    
+    margin-bottom: 15px;
+     &:before {
+      background-image: url('../img/franchise/franchise-add-sprite-sm.png');
+      width: @arrow-left-sm-width;
+      left: -10%;
+      top: -20px;
+      height: @arrow-left-sm-height;
+      background-position: @arrow-left-sm-offset-x @arrow-left-sm-offset-y;
+    }
+    &:after {
+      background-image: url('../img/franchise/franchise-add-sprite-sm.png');
+      width: @arrow-right-sm-width;
+      height: @arrow-right-sm-height;
+      right: -10%;
+      top: -20px;
+      background-position: @arrow-right-sm-offset-x @arrow-right-sm-offset-y;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .create-intro__title {
+    margin-top: 20px;
+  }
+  
+  .create-intro__form-title {
+    font-size: 18px;
+    max-width: 350px;
+  }
+  .create-intro__adv-item {
+    font-size: 13px;
+    width: 160px;
+    
+    margin-top: 50px;
+  }
+  .create-intro__adv-item--volume {
+    
+    margin: 0 -40px;
+    margin-top: 0;
+    vertical-align: top;
+  }
+  .create-intro__adv-items {
+    width: 460px;
+  }
+}

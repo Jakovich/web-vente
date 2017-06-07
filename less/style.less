@@ -1,0 +1,321 @@
+@import "node_modules/normalize.less/normalize.less";
+@import "../fonts/font-awesome.less";
+@import "variables.less";
+@import "mixins.less";
+@import "blocks/franchise-item.less";
+@import "blocks/franchise-area.less";
+@import "blocks/franchise-slider.less";
+@import "blocks/promo-slider.less";
+@import "blocks/main-footer.less";
+@import "blocks/main-header.less";
+@import "blocks/search.less";
+@import "blocks/search-result.less";
+@import "blocks/paginator.less";
+@import "blocks/describe.less";
+@import "blocks/main-nav.less";
+@import "blocks/breadcrumbs.less";
+@import "blocks/big-btn.less";
+@import "blocks/content-menu.less";
+@import "blocks/price.less";
+@import "blocks/error.less";
+@import "blocks/franchises.less";
+@import "blocks/actions.less";
+@import "blocks/subscribe.less";
+@import "blocks/promo.less";
+@import "blocks/franchise.less";
+@import "blocks/franchise-question.less";
+@import "blocks/franchise-info.less";
+@import "blocks/franchise-intro.less";
+@import "blocks/franchise-finance.less";
+@import "blocks/franchise-photos.less";
+@import "blocks/franchise-create.less";
+@import "blocks/franchise-documents.less";
+@import "blocks/franchise-rating.less";
+@import "blocks/create-intro.less";
+@import "blocks/create-examples.less";
+@import "blocks/create-success.less";
+@import "blocks/create-advantages.less";
+@import "blocks/create-benefit.less";
+@import "blocks/create-questions.less";
+@import "blocks/create-location.less";
+@import "blocks/create-form.less";
+@import "blocks/form-status.less";
+@import "blocks/form-create.less";
+@import "blocks/main-content.less";
+@import "blocks/popup-report.less";
+@import "blocks/popup-franchise.less";
+@import "blocks/youtube.less";
+@import "blocks/popup-confirm.less";
+@import "blocks/up-btn.less";
+@import "blocks/ionSlider.less";
+@import "blocks/mobile-nav.less";
+@import "blocks/franchiser.less";
+@import "blocks/offer.less";
+@import "sprites/franchise-sprite.less";
+@import "sprites/franchise-add-sprite.less";
+@import "sprites/franchise-add-sprite-sm.less";
+
+
+body {
+  font-family: "PT Sans", "Trebuchet MS", "Arial", sans-serif;
+  min-width: 480px;
+  background-color: #f2f2f2;
+  margin: 0;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: "PT Sans", "Trebuchet MS", "Arial", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+@media print {
+  
+   html {
+     height: 99%;
+     max-height: none;
+  }
+  
+  body {
+    height: 99%;
+    margin:0.5in; font-family:times
+  }
+  
+  
+  * {
+    background:#fff !important;
+    color:#000 !important;
+    
+  }
+  
+  iframe {
+    display: none!important;
+    height: 0;
+    visibility: hidden;
+  }
+  
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+
+  .offer,
+  .offer--left,
+  .offer__wrp,
+  .offer__wrp-right {
+    display: none!important;
+    height: 0;
+    visibility: hidden;
+  }
+  
+  .main-header__info,
+  .main-header__advantages, 
+  .main-header__nav {
+    display: none;
+  }
+  
+ .main-header__content {
+   padding: 0;
+   height: auto;
+  }
+    
+  
+  .main-header__content-wrp {
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    
+    &:after {
+      display: none;
+    }
+    &:before {
+      display: none;
+    }
+    .clearfix();
+  }
+  
+  .main-header__logo {
+    float: left;
+    position: static;
+    width: 200px;
+    span {
+      display: block;
+    }
+    img {
+      width: 200px;
+      position: static;
+    }
+  }
+
+ 
+  
+  .main-header__logo-wrp {
+    display: inline-block;
+    position: static;
+    width: 200px;
+    
+  }
+  
+  .main-header__contacts {
+    float: right;
+    position: static;
+    width: 200px;
+    display: block;
+  }
+  
+  .breadcrumbs {
+    display: none;
+    height: 0;
+  }
+  
+  
+  .describe,
+  .describe--paddingsm {
+   position: static;
+    margin: 0!important;
+    padding: 0!important;
+   &:after {
+     display: none;
+   }
+   &:before {
+     display: none;
+   }
+  }
+  
+  
+  .describe__franchise-info {
+    padding: 3px;
+  }
+  
+  .describe__franchise-info--franchiser {
+    display: block;
+    page-break-after:avoid;
+    height: auto;
+    visibility: visible;
+    .describe__title {
+      page-break-after:avoid;
+      margin: 0!important;
+      padding: 0!important;
+      page-break-after: avoid;
+      page-break-before: avoid;
+      height: auto;
+    }
+    
+    
+    .describe__item {
+      page-break-after:avoid;
+      display: block;
+    }
+  }
+  
+  
+  .franchise__info-wrp,
+  .franchise-finance__details,
+  .franchise-finance__links,
+  .franchise-finance__award {
+    display: none;
+    height: 0;
+    visibility: hidden;
+  }
+  
+  .franchise-photos__pagination,
+  .franchise-photos__prev,
+  .franchise-photos__next {
+    display: none;
+    height: 0;
+    visibility: hidden;
+  }
+  
+  .describe__franchise-info--video,
+  .describe__franchise-info--pdf {
+    display: none;
+    height: 0;
+    visibility: hidden;
+  }
+  
+  .franchise-question {
+    display: none;
+    height: 0;
+    visibility: hidden;
+  }
+
+  
+  .main-footer__help,
+  .main-footer__nav,
+  .main-footer__second-row {
+    display: none;
+    height: 0;
+    visibility: hidden;
+  }
+  
+  .main-footer_contacts {
+    margin-right: 0;
+    width: 40%;
+    float: right;
+  }
+  
+  .main-content__center {
+    position: static;
+    margin: 0;
+  }
+  
+   
+  .main-content__left {
+
+    display: none;
+    height: 0;
+    visibility: hidden;
+  }
+  
+  .subscribe {
+    display: none;
+    height: 0;
+    visibility: hidden;
+  }
+  
+  .franchise-area {
+    display: none;
+    height: 0;
+    visibility: hidden;
+  }
+  
+  .franchise-slider,
+  .francgise-slider--top {
+    display: none;
+    height: 0;
+    visibility: hidden;
+  }
+  
+  .main-content__right {
+    position: static;
+    display: block;
+    height: auto;
+  }
+  
+  .right-sticky,
+  .left-sticky {
+    display: none;
+  }
+  
+  .mobile-nav, .franchise-documents,
+  .popup-franchise__overlay, .popup-franchise,
+  .popup-report__overlay, .popup-report, .up-btn {
+    display: none;
+    height: 0;
+    visibility: hidden;
+  }
+  
+}

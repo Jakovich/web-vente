@@ -1,0 +1,94 @@
+.franchise-documents {
+  display: none;
+  background-color: rgba(0,6,9,0.3);
+  height: 60px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 41px;
+  z-index: 100;
+}
+
+.franchise-documents__content {
+  width: 960px;
+  margin: 0 auto;
+  text-align: justify;
+  line-height: 0;
+  &:after {
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    content: '';
+    display: inline-block;
+  }
+}
+
+.franchise-documents__logo {
+  display: inline-block;
+  line-height: normal;
+  vertical-align: middle;
+}
+
+.franchise-documents__input-wrp {
+  display: inline-block;
+  line-height: normal;
+  vertical-align: middle;
+  position: relative;
+  margin: 12px auto;
+  
+  
+  i {
+    position: absolute;
+    left: 8px;
+    top: 9px;
+    color: #ffffff;
+  }
+}
+
+
+.franchise-documents__input {
+  border: none;
+  outline: none;
+  padding: 7px 5px;
+  padding-left: 30px;
+  width: 160px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #494D4F;
+  &:focus {
+    outline: 1px solid @green;
+  }
+}
+
+.franchise-documents__btn {
+  display: inline-block;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: @green;
+  color: #ffffff;
+  font-size: 16px;
+  transition: @transition;
+  border: 3px solid @green;
+  cursor: pointer;
+  width: 240px;
+  padding: 4px 0;
+  &:hover {
+    background-color: #ffffff;
+    color: @green;
+  }
+}
+
+.franchise-documents__required {
+  outline: 1px solid red!important;
+}
+
+@media (max-width: 1300px) {
+  .franchise-documents__input {
+    font-size: 13px;
+    width: 150px;
+  }
+  .franchise-documents__input-wrp {
+     margin: 15px auto;
+  }
+}

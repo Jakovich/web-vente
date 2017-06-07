@@ -1,0 +1,228 @@
+.create-success {
+  padding-top: 10px;
+  position: relative;
+  padding-bottom: 60px;
+  &:before, &:after {
+    position: absolute;
+    height: 3px;
+    content: '';
+    width: 70px;
+    left: 50%;
+    margin-left: -140px;
+    top: 80px;
+    background-color: @green;
+    
+  }
+  &:after {
+    margin-left: 70px;
+  }
+}
+
+
+.create-success__title {
+  text-align: center;
+  font-size: 28px;
+  color: #09618a;
+  font-weight: bold;
+  position: relative;
+  padding-top: 80px;
+  margin-bottom: 60px;
+  span {
+    color: @green;
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    background-image: url('../img/franchise/franchise-add-sprite.png');
+    width: @success-title-width;
+    height: @success-title-height;
+    background-position: @success-title-offset-x @success-title-offset-y;
+    top: 0;
+    left: 50%;
+    margin-left: -@success-title-width/2;
+    z-index: 5;
+  }
+}
+
+.create-success__items {
+  width: 1128px;
+  margin: 0 auto;
+}
+
+.create-success__item {
+  margin-top: -20px;
+  position: relative;
+    &:after {
+    position: absolute;
+    content: '';
+    z-index: 4;
+  }
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.create-success__content {
+  position: relative;
+  max-width: 328px;
+  display: inline-block;
+  padding-left: 150px;
+  &:hover {
+    .create-success__img {
+      background-color: @green;
+    }
+    .create-success__exp {
+      color: @green;
+    }
+  }
+}
+
+.create-success__img {
+  border-radius: 50%;
+  padding: 9px;
+  background-color: #ffffff;
+  border: 2px solid @green;
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  left: 0;
+  top: 50%;
+  margin-top: -64px;
+  z-index: 5;
+  transition: @transition;
+}
+.create-success__item--odd {
+  &:after {
+    background-image: url('../img/franchise/lign-dashed-odd.png');
+    width: 195px;
+    height: 88px;
+    left: 466px;
+     top: 70%;
+  }
+  text-align: left;
+  .create-success__content {
+    text-align: right;
+    padding-right: 150px;
+    padding-left: 0;
+  }
+  .create-success__img {
+    right: 0;
+    left: auto;
+    
+  }
+}
+
+.create-success__item--even {
+  &:after {
+    background-image: url('../img/franchise/lign-dashed-even.png');
+    width: 185px;
+    height: 137px;
+    right: 473px;
+    top: 55%;
+  }
+ text-align: right;
+  .create-success__content {
+    text-align: left;
+  }
+}
+
+.create-success__name {
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  color: @green;
+}
+
+.create-success__exp {
+  transition: @transition;
+}
+
+.create-success__text {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 10px 0;
+  color: #404040;
+  
+}
+
+@media (max-width: 1260px) {
+  .create-success__title {
+    font-size: 25px;
+  }
+  
+  .create-success__items {
+    width: 913px;
+  }
+  
+  .create-success__content { 
+    max-width: 246px;
+  }
+  
+  .create-success__item--odd {
+    &:after {
+      left: 360px;
+      top: 80%;
+    }
+  }
+  
+  .create-success__item--even {
+    &:after {
+      right: 360px;
+    }
+  }
+    
+}
+
+@media (max-width: 985px) {
+   .create-success__content {
+    padding-left: 0;
+     padding-right: 0;
+  }
+  .create-success {
+    padding-bottom: 10px;
+  }
+  .create-success__title {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+  
+  .create-success__text {
+    font-size: 14px;
+  }
+  
+  .create-success__items {
+    max-width: 490px;
+    padding: 0 15px;
+  }
+  .create-success__item {
+    text-align: center;
+    margin-bottom: 40px;
+    &:after {
+      display: none;
+    }
+  }
+  .create-success__item--odd,
+  .create-success__item--even {
+    .create-success__content {
+      text-align: center;
+      max-width: 480px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  
+  .create-success__img {
+    position: static;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+   .create-success__items {
+    max-width: 380px;
+    
+  }
+}

@@ -1,0 +1,100 @@
+.franchise-intro {
+
+  float: right;
+  width: 33%;
+}
+
+.franchise-intro__content {
+  border: 1px solid #005b82;
+  padding: 15px 8%;
+  margin-left: 3%;
+}
+
+.franchise-intro__logo {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.franchise-intro__franchiser {
+  margin: 17px 0;
+  margin-bottom: 0;
+}
+
+.franchise-intro__link {
+  margin: 0 auto;
+  margin-top: 17px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  border: 3px solid @green;
+  background-color: @green;
+  transition: @transition;
+  color: #ffffff;
+  padding: 7px 0;
+  max-width: 214px;
+  font-weight: bold;
+  &:hover {
+    background-color: #ffffff;
+    color: @green;
+  }
+}
+
+@media (max-width: 1400px) {
+  .franchise-intro__logo {
+    margin: 0 auto;
+    margin-bottom: 3%;
+    width: 90%;
+    
+  }
+  
+  
+  .franchise-intro__content {
+    margin-left: 1%;
+  }
+  
+  .franchise-intro__franchiser {
+    margin-top: 3%;
+    
+  }
+  .franchise-intro__link {
+    margin-top: 3%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1200px) {
+  
+  .franchise-intro {
+    float: none;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+  
+  .franchise-intro__content {
+    margin-left: 0;
+    position: relative;
+  }
+  
+  .franchise-intro__franchiser {
+    margin: 0;
+  }
+  
+  .franchiser__logo-wrp {
+    float: right;
+    width: 105px;
+  }
+  
+  .franchise-intro__link {
+    display: block;
+    width: 50%;
+    max-width: none;
+    min-width: 215px;
+    position: absolute;
+    left: 15px;
+    top: 63px;
+  }
+}

@@ -1,0 +1,137 @@
+.franchise-photos {
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  max-width: 540px;
+  width: 64%;
+  float: left;
+}
+
+.franchise-photos__items {
+  width: 20000em;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.franchise-photos__prev:hover span,
+.franchise-photos__next:hover span {
+  display: block;
+}
+
+.franchise-photos__prev.inactive,
+.franchise-photos__next.inactive {
+  opacity: .5;
+  cursor: default;
+}
+
+.franchise-photos__item {
+  position: relative;
+  float: left;
+  width: 540px;
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto !important;
+  }
+  
+}
+
+.franchise-photos__info {
+  position: absolute;
+  right: 0;
+  padding: 5px;
+  width: 230px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.franchise-photos__info--invest {
+  top: 40px;
+  background-color: #0e5e7c;
+  background-color: rgba(14,94,124,0.8);
+  
+}
+
+.franchise-photos__info--payback {
+  top: 80px;
+  background-color: @green;
+  background-color: rgba(71,164,36,0.8);
+}
+
+.franchise-photos__jcarousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.franchise-photos__jcarousel-wrapper {
+  margin: 0 auto;
+  position: relative;
+  border: none;
+}
+
+.franchise-photos__prev,
+.franchise-photos__next {
+  position: absolute;
+  bottom:  25px;
+  margin-top: -20px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  font: 45px Arial, sans-serif;
+  z-index: 50;
+}
+
+.franchise-photos__prev {
+  left: 5%;
+}
+
+.franchise-photos__next {
+  right: 5%;
+}
+
+.franchise-photos__pagination {
+  position: absolute;
+  bottom: 0;
+  padding: 15px 0;
+  text-align: center;
+  margin: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.franchise-photos__pagination a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0px;
+  line-height: 14px;
+  width: 18px;
+  height: 18px;
+  background: rgb(204, 204, 204);
+  border-radius: 50%;
+  padding: 3px;
+  text-align: center;
+  margin-right: 8px;
+  opacity: .75;
+}
+
+.franchise-photos__pagination a.active {
+  background: @green;
+  color: #fff;
+  opacity: 1;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 1200px) {
+  .franchise-photos {
+    float: none;
+    width: 100%;
+  }
+}

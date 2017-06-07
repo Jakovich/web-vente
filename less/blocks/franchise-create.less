@@ -1,0 +1,65 @@
+.franchise-create__title {
+  font-size: 16px;
+  color: #666666;
+  position: relative;
+  padding-bottom: 7px;
+  margin-bottom: 25px;
+  &:before {
+    position: absolute;
+    content: '';
+    height: 2px;
+    left: 0;
+    right: 0;
+    background-color: @green;
+    bottom: 0;
+  }
+  
+  &:after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    right: 0;
+    left: 248px;
+    background-color: #e4e4e4;
+    bottom: 0;
+  }
+}
+
+.franchise-create__menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+
+.franchise-create__menu-item {
+  display: inline-block;
+  width: 180px;
+}
+
+.franchise-create__menu-item {
+  a {
+    color: #999999;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    transition: @transition;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+    
+    &:hover {
+      color: #666666;
+      border: 1px solid #999999;
+    }
+  }
+}
+
+.franchise-create__menu-item--active {
+  a {
+    color: #666666;
+    border: 1px solid #999999;
+  }
+}
+

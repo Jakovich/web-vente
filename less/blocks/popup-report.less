@@ -1,0 +1,208 @@
+//вплывающее модальное окно с формой
+.popup-report {
+  display: none;
+  position: absolute;
+  top: 10%;
+  width: 310px;
+  height: 440px;
+  padding: 10px 50px;
+  left: 50%;
+  margin-left: -205px;
+  z-index: 105;
+}
+.popup-report__overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-color: rgba(0,0,0,0.7);
+
+  //opacity: 0.7;
+  //filter: alpha(opacity=70);
+  overflow-y: auto;
+  z-index: 104;
+}
+.popup-report__bg {
+  background-color: #00719b;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.popup-report__close {
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 35px;
+  cursor: pointer;
+  right: 20px;
+  top: 10px;
+  transition: @transition;
+  &:hover {
+    color: @green;
+  }
+}
+.popup-report__title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 18px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    height: 1px;
+    bottom: 0;
+    background-color: #ffffff;
+  }
+}
+.popup-report__wrapper {
+  width: 220px;
+  margin: 15px auto;
+  position: relative;
+  label {
+    position: absolute;
+    color: #999999;
+    left: 7px;
+    top: 5px;
+  }
+}
+.popup-report__input {
+  display: block;
+  padding: 7px 5px;
+  padding-left: 30px;
+  width: 185px;
+  font-size: 14px;
+  border: none;
+  color: #333333;
+  transition: @transition;
+  &:focus {
+    outline: 2px solid @green;
+  }
+}
+.popup-report__message {
+  width: 100%;
+  padding: 5px 5px;
+  margin-top: 5px;
+  font-size: 14px;
+  border: none;
+  color: #333333;
+  &:focus {
+    outline: 2px solid @green;
+  }
+}
+.popup-report__btn {
+  display: block;
+  margin: 0 auto;
+  background-color: @green;
+  border: 3px solid @green;
+  cursor: pointer;
+  padding: 12px 30px;
+  width: 213px;
+  font-size: 18px;
+  color: #ffffff;
+  outline: none;
+  transition: @transition;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 15px;
+  &:hover {
+    background-color: #00719b;
+  }
+}
+.popup-report__required {
+  position: relative;
+  &:after {
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #db524b;
+    right: -12px;
+    top: 12px;
+  }
+}
+.popup-report__completed {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 9px;
+    background-image: url('../img/icon-succes.png');
+    right: -14px;
+    top: 10px;
+  }
+  input,
+  textarea,
+  select {
+    background-color: #2C2E34;
+    color: #D7D7D7;
+  }
+}
+//анимация при невалидных данных
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+.popup-report__shake {
+  -webkit-animation: shake 0.6s;
+  animation: shake 0.6s;
+}
+@media (max-width: 590px) {
+  .popup-report {
+    padding: 10px 30px;
+    margin-left: -185px;
+  }
+}

@@ -1,0 +1,228 @@
+.create-benefit {
+  background-image: url('../img/franchise/create-benefit-bg-big.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-top: 10px;
+  margin-bottom: 60px;
+  position: relative;
+  &:before, &:after {
+    position: absolute;
+    height: 3px;
+    content: '';
+    width: 70px;
+    left: 50%;
+    margin-left: -140px;
+    top: 60px;
+    background-color: @green;
+    
+  }
+  &:after {
+    margin-left: 70px;
+  }
+}
+
+.create-benefit__title {
+  text-align: center;
+  font-size: 28px;
+  color: #09618a;
+  font-weight: bold;
+  position: relative;
+  padding-top: 70px;
+  margin-bottom: 30px;
+  span {
+    color: @green;
+  }
+  
+  &:before {
+    position: absolute;
+    content: '';
+    background-image: url('../img/franchise/franchise-add-sprite.png');
+    width: @benefit-title-width;
+    height: @benefit-title-height;
+    background-position: @benefit-title-offset-x @benefit-title-offset-y;
+    top: 0;
+    left: 50%;
+    margin-left: -@benefit-title-width/2;
+    z-index: 5;
+  }
+}
+
+.create-benefit__calculator {
+  background-color: #ffffff;
+  max-width: 75%;
+  min-width: 976px;
+  box-shadow: 0px 32px 64px 0px rgba(0, 0, 0, 0.2);
+  padding-top: 5px;
+  padding-bottom: 25px;
+  text-align: right;
+}
+
+.create-benefit__item {
+  display: inline-block;
+  width: 810px;
+  padding: 5px 80px;
+  text-align: left;
+  color: #404040;
+}
+
+.create-benefit__item--result {
+  margin-top: 20px;
+  .clearfix();
+}
+
+.create-benefit__result-exp {
+  float: left;
+  width: 500px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.create-benefit__result {
+  margin-top: 20px;
+  float: right;
+  width: 290px;
+  margin-right: -100px;
+  background-color: @green;
+  color: #ffffff;
+  font-size: 34px;
+  padding: 15px 35px;
+  font-weight: bold;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+}
+
+.create-benefit__name {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.create-benefit__exp {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+@media (max-width: 1260px) {
+  .create-benefit__calculator {
+    max-width: 928px;
+    
+    text-align: center;
+  }
+  .create-benefit__title {
+     font-size: 25px;
+  }
+  
+  .create-benefit__name {
+    font-size: 20px;
+  }
+  
+  .create-benefit__exp {
+    font-size: 16px;
+  }
+  
+  
+  .create-benefit__result-exp {
+    font-size: 18px;
+    margin-top: 30px;
+    
+  }
+  .create-benefit__result {
+    font-size: 30px;
+  }
+  
+  
+}
+
+@media (max-width: 985px) {
+  .create-benefit {
+
+    &:before, &:after {
+      height: 2px;
+      width: 50px;
+      left: 50%;
+      margin-left: -90px;
+      top: 45px;
+    }
+    &:after {
+      margin-left: 35px;
+    }
+  }
+  
+  .create-benefit__calculator {
+    padding-top: 20px;
+    width: 100%;
+    max-width: none; 
+    min-width: 480px;
+  }
+  .create-benefit__item {
+    width: 73%;
+    padding: 5px 0;
+  }
+  
+  .create-benefit__title {
+    font-size: 20px;
+    padding-top: 50px;
+    margin-bottom: 40px;
+  
+    &:before {
+      background-image: url('../img/franchise/franchise-add-sprite-sm.png');
+      width: @benefit-title-sm-width;
+      height: @benefit-title-sm-height;
+      background-position: @benefit-title-sm-offset-x @benefit-title-sm-offset-y;
+      top: 0;
+      left: 50%;
+      margin-left: -@benefit-title-sm-width/2;
+      z-index: 5;
+    }
+  }
+  
+  .create-benefit__name {
+    font-size: 20px;
+  }
+  
+  .create-benefit__exp {
+    font-size: 14px;
+  }
+  .create-benefit__item--result {
+  
+    text-align: center;
+  }
+  
+  .create-benefit__result-exp {
+    font-size: 16px;
+    font-weight: normal;
+    width: 40%;
+    float: none;
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: middle;
+    margin: 0;
+    margin-right: 20px;
+  }
+  .create-benefit__result {
+    font-size: 20px;
+    width: 220px;
+    margin-right: 0;
+    float: none;
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+  }
+  
+}
+
+@media (max-width: 680px) {
+  .create-benefit__result-exp {  
+    width: 90%;   
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .create-benefit__result {
+    width: 220px;
+    display: block;
+    margin: 0 auto;
+  }
+}

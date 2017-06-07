@@ -1,0 +1,573 @@
+.form-create__field {
+  border: none;
+  padding: 20px 0;
+  
+  position: relative;
+  
+  &:before {
+    position: absolute;
+    content: '';
+    height: 3px;
+    top: -3px;
+    left: -30px;
+    right: -30px;
+    background-color: #cccccc;
+  }
+}
+
+/*для фикса бага псевдоэлемента в Mozilla (не видит legend в составе fieldset)*/
+@-moz-document url-prefix() {
+  .form-create__field::before {
+    top: -40px;
+  }
+}
+
+
+.form-create__title {
+  padding-top: 20px;
+  font-size: 16px;
+  color: #666666;
+  font-weight: bold;
+}
+
+.form-create__input,
+.form-create__select,
+.form-create__textarea {
+  font-size: 16px;
+  color: #666666;
+  padding: 5px;
+  background-color: @form-input-bg;
+  outline: none;
+  border: none;
+  border-bottom: @form-border;
+  
+  &:focus {
+    outline: 1px solid @blue-dark;
+  }
+}
+
+
+.form-create select:invalid:not(:focus) {
+  color: #999999;
+}
+
+.form-create select:focus option {
+  color: #666666;
+}
+
+.form-create {
+  input::-webkit-input-placeholder {color:#999999; opacity: 1;}
+  input::-moz-placeholder          {color:#999999; opacity: 1;}/* Firefox 19+ */
+  input:-moz-placeholder           {color:#999999; opacity: 1;}/* Firefox 18- */
+  input:-ms-input-placeholder      {color:#999999;}
+  
+  textarea::-webkit-input-placeholder {color:#999999; opacity: 1;}
+  textarea::-moz-placeholder          {color:#999999; opacity: 1;}/* Firefox 19+ */
+  textarea:-moz-placeholder           {color:#999999; opacity: 1;}/* Firefox 18- */
+  textarea:-ms-input-placeholder      {color:#999999;}
+}
+
+
+.form-create__input {
+  height: 30px;
+  padding: 0 5px;
+}
+
+
+.form-create__select {
+  padding: 0 5px;
+  width: 100%;
+  -webkit-appearance: none;
+  padding-right: 27px;
+  background-image: url("../img/form-icons/icon-select.png");
+  background-repeat: no-repeat;
+  background-position: 95% 60%;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  -ms-appearance: none;
+  appearance: none!important;
+  cursor: pointer;
+  outline: none;
+  height: 31px;
+}
+
+.form-create__select::-ms-expand {
+  display: none;
+}
+
+.form-create__select--small {
+  padding-right: 17px;
+  color: #999999;
+  background-position: 80% 60%;
+}
+
+
+
+.form-create__select-wrp {
+  width: 225px;
+  float: left;
+}
+
+.form-create__select-wrp--small {
+  width: 40px;
+}
+
+.form-create__item {
+  .clearfix();
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.form-create__item--float {
+  float: left;
+}
+
+.form-create__item--smmargin {
+  margin-bottom: 10px;
+}
+
+.form-create__item--hidden {
+  display: none;
+  margin-left: 156px;
+  margin-top: -20px;
+}
+
+.form-create__row {
+  .clearfix();
+}
+
+.form-create__exp {
+  font-size: 16px;
+  color: #666666;
+  float: left;
+  width: 135px;
+  padding-right: 22px;
+  padding-left: 0;
+  margin-top: 5.5px;
+  text-align: right;
+}
+
+.form-create__textarea-wrp {
+  float: left;
+  width: 62%;
+}
+
+.form-create__inp-wrp {
+  float: left;
+  width: 192px;
+}
+
+.form-create__inp-wrp--inline {
+  width: 160px;
+  margin-right: 25px;
+}
+
+.form-create__inp-wrp--small {
+  width: 75px;
+}
+
+.form-create__inp-wrp--full {
+  
+  width: 62%;
+}
+
+.form-create__inp-wrp--nofloat {
+  float: none;
+  position: relative;
+  margin-bottom: 15px;
+  width: 250px
+}
+
+.form-create__inp-wrp--phone,
+.form-create__inp-wrp--email {
+  float: none;
+  margin-bottom: 15px;
+}
+
+.form-create__inp-wrp--name {
+  margin-bottom: 15px;
+  display: inline-block;
+  float: none;
+}
+
+.form-create__inp-wrp--name {
+  width: 250px;
+}
+
+.form-create__textarea {
+  width: 94%;
+}
+
+.form-create__input {
+  width: 94%;
+}
+
+.form-create__inp-wrp--small {
+  .form-create__input {
+    width: 82%;
+  }
+}
+
+//загрузка изображений
+
+.form-create__upload-items {
+  float: left;
+  width: 74.5%;
+  max-width: 565px;
+}
+
+.form-create__upload-item--photo {
+  display: inline-block;
+  margin-right: 10px;
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+/**кнопка загрузки изображения*/
+.form-create__filename {
+  background-color: #3a3d45;
+  border: 0;
+  color: @gray-dark;
+  display: inline-block;
+  line-height: 25px;
+  width: 200px;
+  heght: 25px;
+  margin: 0 auto;
+  margin-bottom: -10px;
+  display: block;
+  text-align: center;
+}
+
+.form-create__upload-wrp {
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 180px;
+}
+
+.form-create__upload-wrp--presentation {
+  width: 170px;
+  margin-bottom: 15px;
+  margin-top: 2px
+}
+
+.form-create__file-upload {
+  position: relative; /* Даем возможность делать позиционирование, внутри данного элемента */
+  overflow: hidden; /* Все что выходит за пределы - скрываем */
+  width: 180px; /* Задаем ширину кнопки выбора файла */
+  height: 65px; /*задаем высоту кнопки выбора файла */ 
+  background-color: #ffffff;
+  border: 1px solid @blue-dark;
+  padding: 6px 4px;
+  color: @blue-dark;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-align: center;
+  margin: 0 auto;
+  
+  &:hover {
+    background-color: @blue-light;
+  }
+  
+  input[type="file"]{
+    display: none; /* Обязательно скрываем настоящий Input File */
+  }
+  
+  label {
+    /* Растягиваем label на всю возможную площадь блока .file-upload */
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  i {
+    display: block;
+    margin-top: 8px;
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+  span {
+    display: block;
+    color: @blue-dark;
+    font-weight: 700;
+    &:last-child {
+      
+      color: @gray-dark;
+      font-weight: normal;
+    }
+  }
+  
+}
+
+.form-create__upload-wrp--photo {
+  width: 145px;
+  height: 100px;
+  .form-create__file-upload {
+    width: 137px; 
+    height: 100px;
+    i {
+      font-size: 32px;
+      margin-bottom: 5px;
+    }
+  }
+  
+  .form-create__upload-result {
+    width: 145px;
+  }
+}
+
+.form-create__upload-wrp--presentation {
+  width: 194px;
+  .form-create__file-upload {
+    width: 194px;
+  }
+}
+
+.form-create__upload-result--logo {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 15px;
+  
+  img {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+}
+
+.form-create__upload-result--present {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.form-create__upload-result--photo {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 145px; 
+  height: 110px; 
+}
+
+.form-create__upload-result {
+  display: none;
+}
+
+.form-create__upload-remove {
+  color: red;
+  transition: @transition;
+  color: @blue-dark;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  &:hover {
+    color: @gray-dark;
+    text-decoration: none;
+  }
+  
+  &:focus {
+    color: red;
+    text-decoration: none;
+  }
+}
+
+
+.form-create__path {
+  background-color: #ffffff;
+  color: @blue-dark;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  text-align: left;
+}
+
+
+
+//кнопка добавить
+
+
+
+
+//кнопка
+
+.form-create__btn {
+  display: block;
+  margin: 0 auto;
+  width: 345px;
+  padding: 10px 0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: @transition;
+  
+  border: 3px solid @green;
+  background-color: @green;
+  color: #ffffff;
+  margin-bottom: 20px;
+  &:hover {
+    color: @green;
+    background-color: #ffffff;
+  }
+}
+
+.form-create__add-item {
+  display: none;
+  min-width: 270px;
+}
+
+.form-create__add-btn {
+  color: #949ba2;
+  cursor: pointer;
+  background-color: #ffffff;
+  border:none;
+  transition: @transition;
+  position: relative;
+  padding-left: 30px;
+  max-width: 195px;
+  text-align: left;
+  font-size: 14px;
+  min-height: 25px;
+  i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 24px;
+  }
+  &:hover {
+    color: @green;
+  }
+}
+
+.form-create__add-btn--hide {
+  display: none;
+}
+
+
+.form-create__add-btn--inactive {
+  color: #cccccc;
+  cursor: text;
+  
+  &:hover {
+    color: #cccccc;
+  }
+}
+
+
+
+.form-create__errorMsg {
+  color: red;
+  font-size: 11px;
+  position: relative;
+  top: -10px;
+  display: block;
+}
+
+.form-create__errorMsg--absolute {
+  position: absolute;
+  top: 30px;
+  width: 180px;
+}
+
+.form-create__block-wrp {
+  float: left;
+  width: 270px;
+  position: relative;
+}
+
+input[name='name'],
+input[name='firstName'],
+input[name='secondName'],
+input[name='patronymic'] {
+  text-transform: capitalize;
+}
+
+.input-required {
+  position: relative;
+  &:after {
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #db524b;
+    right: -12px;
+    top: 12px;
+  }
+}
+
+.input-completed {
+  position: relative;
+  &:after {
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 9px;
+    background-image: url('../img/form-icons/icon-succes.png');
+    right: -14px;
+    top: 10px;
+  }
+}
+
+
+
+@media (max-width: 985px) {
+  .form-create__field {
+    &:before {
+      left: 0px;
+      right: 0px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  form[name="create-short"] {
+    .form-create__add-btn {
+      display: none;
+    }
+  }
+  
+  .form-create__item--photo {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  
+  .form-create__exp {
+    width: 110px;
+    padding-left: 0;
+  }
+  .form-create__inp-wrp--full {
+  
+    width: 67%;
+  }
+  
+  .form-create__errorMsg--absolute {
+ 
+    width: 140px;
+  }
+  
+  .form-create__upload-item--photo {
+  
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+  
+  .form-create__item--hidden {
+  
+    margin-left: 132px;
+  }
+  .form-create__add-btn {
+    margin-left: 130px;
+  }
+  
+  .form-create__upload-items {
+    float: left;
+    width: 70%;
+  }  
+}
+

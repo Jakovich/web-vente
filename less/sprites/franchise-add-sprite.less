@@ -1,0 +1,396 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+@adv-buyer-name: 'adv-buyer';
+@adv-buyer-x: 182px;
+@adv-buyer-y: 266px;
+@adv-buyer-offset-x: -182px;
+@adv-buyer-offset-y: -266px;
+@adv-buyer-width: 50px;
+@adv-buyer-height: 50px;
+@adv-buyer-total-width: 408px;
+@adv-buyer-total-height: 333px;
+@adv-buyer-image: 'franchise-add-sprite.png';
+@adv-buyer: 182px 266px -182px -266px 50px 50px 408px 333px 'franchise-add-sprite.png' 'adv-buyer';
+@adv-experience-name: 'adv-experience';
+@adv-experience-x: 232px;
+@adv-experience-y: 266px;
+@adv-experience-offset-x: -232px;
+@adv-experience-offset-y: -266px;
+@adv-experience-width: 50px;
+@adv-experience-height: 50px;
+@adv-experience-total-width: 408px;
+@adv-experience-total-height: 333px;
+@adv-experience-image: 'franchise-add-sprite.png';
+@adv-experience: 232px 266px -232px -266px 50px 50px 408px 333px 'franchise-add-sprite.png' 'adv-experience';
+@adv-professional-name: 'adv-professional';
+@adv-professional-x: 282px;
+@adv-professional-y: 266px;
+@adv-professional-offset-x: -282px;
+@adv-professional-offset-y: -266px;
+@adv-professional-width: 50px;
+@adv-professional-height: 50px;
+@adv-professional-total-width: 408px;
+@adv-professional-total-height: 333px;
+@adv-professional-image: 'franchise-add-sprite.png';
+@adv-professional: 282px 266px -282px -266px 50px 50px 408px 333px 'franchise-add-sprite.png' 'adv-professional';
+@adv-site-name: 'adv-site';
+@adv-site-x: 82px;
+@adv-site-y: 266px;
+@adv-site-offset-x: -82px;
+@adv-site-offset-y: -266px;
+@adv-site-width: 50px;
+@adv-site-height: 50px;
+@adv-site-total-width: 408px;
+@adv-site-total-height: 333px;
+@adv-site-image: 'franchise-add-sprite.png';
+@adv-site: 82px 266px -82px -266px 50px 50px 408px 333px 'franchise-add-sprite.png' 'adv-site';
+@adv-term-name: 'adv-term';
+@adv-term-x: 132px;
+@adv-term-y: 266px;
+@adv-term-offset-x: -132px;
+@adv-term-offset-y: -266px;
+@adv-term-width: 50px;
+@adv-term-height: 50px;
+@adv-term-total-width: 408px;
+@adv-term-total-height: 333px;
+@adv-term-image: 'franchise-add-sprite.png';
+@adv-term: 132px 266px -132px -266px 50px 50px 408px 333px 'franchise-add-sprite.png' 'adv-term';
+@arrow-left-md-name: 'arrow-left-md';
+@arrow-left-md-x: 362px;
+@arrow-left-md-y: 251px;
+@arrow-left-md-offset-x: -362px;
+@arrow-left-md-offset-y: -251px;
+@arrow-left-md-width: 32px;
+@arrow-left-md-height: 47px;
+@arrow-left-md-total-width: 408px;
+@arrow-left-md-total-height: 333px;
+@arrow-left-md-image: 'franchise-add-sprite.png';
+@arrow-left-md: 362px 251px -362px -251px 32px 47px 408px 333px 'franchise-add-sprite.png' 'arrow-left-md';
+@arrow-left-name: 'arrow-left';
+@arrow-left-x: 240px;
+@arrow-left-y: 0px;
+@arrow-left-offset-x: -240px;
+@arrow-left-offset-y: 0px;
+@arrow-left-width: 61px;
+@arrow-left-height: 87px;
+@arrow-left-total-width: 408px;
+@arrow-left-total-height: 333px;
+@arrow-left-image: 'franchise-add-sprite.png';
+@arrow-left: 240px 0px -240px 0px 61px 87px 408px 333px 'franchise-add-sprite.png' 'arrow-left';
+@arrow-right-md-name: 'arrow-right-md';
+@arrow-right-md-x: 362px;
+@arrow-right-md-y: 204px;
+@arrow-right-md-offset-x: -362px;
+@arrow-right-md-offset-y: -204px;
+@arrow-right-md-width: 33px;
+@arrow-right-md-height: 47px;
+@arrow-right-md-total-width: 408px;
+@arrow-right-md-total-height: 333px;
+@arrow-right-md-image: 'franchise-add-sprite.png';
+@arrow-right-md: 362px 204px -362px -204px 33px 47px 408px 333px 'franchise-add-sprite.png' 'arrow-right-md';
+@arrow-right-name: 'arrow-right';
+@arrow-right-x: 240px;
+@arrow-right-y: 87px;
+@arrow-right-offset-x: -240px;
+@arrow-right-offset-y: -87px;
+@arrow-right-width: 61px;
+@arrow-right-height: 87px;
+@arrow-right-total-width: 408px;
+@arrow-right-total-height: 333px;
+@arrow-right-image: 'franchise-add-sprite.png';
+@arrow-right: 240px 87px -240px -87px 61px 87px 408px 333px 'franchise-add-sprite.png' 'arrow-right';
+@benefit-title-name: 'benefit-title';
+@benefit-title-x: 120px;
+@benefit-title-y: 72px;
+@benefit-title-offset-x: -120px;
+@benefit-title-offset-y: -72px;
+@benefit-title-width: 120px;
+@benefit-title-height: 54px;
+@benefit-title-total-width: 408px;
+@benefit-title-total-height: 333px;
+@benefit-title-image: 'franchise-add-sprite.png';
+@benefit-title: 120px 72px -120px -72px 120px 54px 408px 333px 'franchise-add-sprite.png' 'benefit-title';
+@examples-title-name: 'examples-title';
+@examples-title-x: 100px;
+@examples-title-y: 136px;
+@examples-title-offset-x: -100px;
+@examples-title-offset-y: -136px;
+@examples-title-width: 120px;
+@examples-title-height: 51px;
+@examples-title-total-width: 408px;
+@examples-title-total-height: 333px;
+@examples-title-image: 'franchise-add-sprite.png';
+@examples-title: 100px 136px -100px -136px 120px 51px 408px 333px 'franchise-add-sprite.png' 'examples-title';
+@hand-name: 'hand';
+@hand-x: 0px;
+@hand-y: 136px;
+@hand-offset-x: 0px;
+@hand-offset-y: -136px;
+@hand-width: 100px;
+@hand-height: 70px;
+@hand-total-width: 408px;
+@hand-total-height: 333px;
+@hand-image: 'franchise-add-sprite.png';
+@hand: 0px 136px 0px -136px 100px 70px 408px 333px 'franchise-add-sprite.png' 'hand';
+@location-title-name: 'location-title';
+@location-title-x: 0px;
+@location-title-y: 72px;
+@location-title-offset-x: 0px;
+@location-title-offset-y: -72px;
+@location-title-width: 120px;
+@location-title-height: 64px;
+@location-title-total-width: 408px;
+@location-title-total-height: 333px;
+@location-title-image: 'franchise-add-sprite.png';
+@location-title: 0px 72px 0px -72px 120px 64px 408px 333px 'franchise-add-sprite.png' 'location-title';
+@man-one-active-name: 'man-one-active';
+@man-one-active-x: 362px;
+@man-one-active-y: 0px;
+@man-one-active-offset-x: -362px;
+@man-one-active-offset-y: 0px;
+@man-one-active-width: 46px;
+@man-one-active-height: 54px;
+@man-one-active-total-width: 408px;
+@man-one-active-total-height: 333px;
+@man-one-active-image: 'franchise-add-sprite.png';
+@man-one-active: 362px 0px -362px 0px 46px 54px 408px 333px 'franchise-add-sprite.png' 'man-one-active';
+@man-one-name: 'man-one';
+@man-one-x: 362px;
+@man-one-y: 54px;
+@man-one-offset-x: -362px;
+@man-one-offset-y: -54px;
+@man-one-width: 46px;
+@man-one-height: 54px;
+@man-one-total-width: 408px;
+@man-one-total-height: 333px;
+@man-one-image: 'franchise-add-sprite.png';
+@man-one: 362px 54px -362px -54px 46px 54px 408px 333px 'franchise-add-sprite.png' 'man-one';
+@man-three-active-name: 'man-three-active';
+@man-three-active-x: 301px;
+@man-three-active-y: 0px;
+@man-three-active-offset-x: -301px;
+@man-three-active-offset-y: 0px;
+@man-three-active-width: 61px;
+@man-three-active-height: 67px;
+@man-three-active-total-width: 408px;
+@man-three-active-total-height: 333px;
+@man-three-active-image: 'franchise-add-sprite.png';
+@man-three-active: 301px 0px -301px 0px 61px 67px 408px 333px 'franchise-add-sprite.png' 'man-three-active';
+@man-three-name: 'man-three';
+@man-three-x: 301px;
+@man-three-y: 67px;
+@man-three-offset-x: -301px;
+@man-three-offset-y: -67px;
+@man-three-width: 61px;
+@man-three-height: 67px;
+@man-three-total-width: 408px;
+@man-three-total-height: 333px;
+@man-three-image: 'franchise-add-sprite.png';
+@man-three: 301px 67px -301px -67px 61px 67px 408px 333px 'franchise-add-sprite.png' 'man-three';
+@man-two-active-name: 'man-two-active';
+@man-two-active-x: 0px;
+@man-two-active-y: 266px;
+@man-two-active-offset-x: 0px;
+@man-two-active-offset-y: -266px;
+@man-two-active-width: 41px;
+@man-two-active-height: 67px;
+@man-two-active-total-width: 408px;
+@man-two-active-total-height: 333px;
+@man-two-active-image: 'franchise-add-sprite.png';
+@man-two-active: 0px 266px 0px -266px 41px 67px 408px 333px 'franchise-add-sprite.png' 'man-two-active';
+@man-two-name: 'man-two';
+@man-two-x: 41px;
+@man-two-y: 266px;
+@man-two-offset-x: -41px;
+@man-two-offset-y: -266px;
+@man-two-width: 41px;
+@man-two-height: 67px;
+@man-two-total-width: 408px;
+@man-two-total-height: 333px;
+@man-two-image: 'franchise-add-sprite.png';
+@man-two: 41px 266px -41px -266px 41px 67px 408px 333px 'franchise-add-sprite.png' 'man-two';
+@money-md-name: 'money-md';
+@money-md-x: 362px;
+@money-md-y: 158px;
+@money-md-offset-x: -362px;
+@money-md-offset-y: -158px;
+@money-md-width: 38px;
+@money-md-height: 46px;
+@money-md-total-width: 408px;
+@money-md-total-height: 333px;
+@money-md-image: 'franchise-add-sprite.png';
+@money-md: 362px 158px -362px -158px 38px 46px 408px 333px 'franchise-add-sprite.png' 'money-md';
+@money-name: 'money';
+@money-x: 301px;
+@money-y: 197px;
+@money-offset-x: -301px;
+@money-offset-y: -197px;
+@money-width: 48px;
+@money-height: 58px;
+@money-total-width: 408px;
+@money-total-height: 333px;
+@money-image: 'franchise-add-sprite.png';
+@money: 301px 197px -301px -197px 48px 58px 408px 333px 'franchise-add-sprite.png' 'money';
+@questions-title-name: 'questions-title';
+@questions-title-x: 120px;
+@questions-title-y: 0px;
+@questions-title-offset-x: -120px;
+@questions-title-offset-y: 0px;
+@questions-title-width: 120px;
+@questions-title-height: 67px;
+@questions-title-total-width: 408px;
+@questions-title-total-height: 333px;
+@questions-title-image: 'franchise-add-sprite.png';
+@questions-title: 120px 0px -120px 0px 120px 67px 408px 333px 'franchise-add-sprite.png' 'questions-title';
+@select-arrow-name: 'select-arrow';
+@select-arrow-x: 395px;
+@select-arrow-y: 204px;
+@select-arrow-offset-x: -395px;
+@select-arrow-offset-y: -204px;
+@select-arrow-width: 12px;
+@select-arrow-height: 8px;
+@select-arrow-total-width: 408px;
+@select-arrow-total-height: 333px;
+@select-arrow-image: 'franchise-add-sprite.png';
+@select-arrow: 395px 204px -395px -204px 12px 8px 408px 333px 'franchise-add-sprite.png' 'select-arrow';
+@success-title-name: 'success-title';
+@success-title-x: 0px;
+@success-title-y: 0px;
+@success-title-offset-x: 0px;
+@success-title-offset-y: 0px;
+@success-title-width: 120px;
+@success-title-height: 72px;
+@success-title-total-width: 408px;
+@success-title-total-height: 333px;
+@success-title-image: 'franchise-add-sprite.png';
+@success-title: 0px 0px 0px 0px 120px 72px 408px 333px 'franchise-add-sprite.png' 'success-title';
+@volume-md-name: 'volume-md';
+@volume-md-x: 80px;
+@volume-md-y: 206px;
+@volume-md-offset-x: -80px;
+@volume-md-offset-y: -206px;
+@volume-md-width: 64px;
+@volume-md-height: 48px;
+@volume-md-total-width: 408px;
+@volume-md-total-height: 333px;
+@volume-md-image: 'franchise-add-sprite.png';
+@volume-md: 80px 206px -80px -206px 64px 48px 408px 333px 'franchise-add-sprite.png' 'volume-md';
+@volume-name: 'volume';
+@volume-x: 0px;
+@volume-y: 206px;
+@volume-offset-x: 0px;
+@volume-offset-y: -206px;
+@volume-width: 80px;
+@volume-height: 60px;
+@volume-total-width: 408px;
+@volume-total-height: 333px;
+@volume-image: 'franchise-add-sprite.png';
+@volume: 0px 206px 0px -206px 80px 60px 408px 333px 'franchise-add-sprite.png' 'volume';
+@world-md-name: 'world-md';
+@world-md-x: 362px;
+@world-md-y: 108px;
+@world-md-offset-x: -362px;
+@world-md-offset-y: -108px;
+@world-md-width: 46px;
+@world-md-height: 50px;
+@world-md-total-width: 408px;
+@world-md-total-height: 333px;
+@world-md-image: 'franchise-add-sprite.png';
+@world-md: 362px 108px -362px -108px 46px 50px 408px 333px 'franchise-add-sprite.png' 'world-md';
+@world-name: 'world';
+@world-x: 301px;
+@world-y: 134px;
+@world-offset-x: -301px;
+@world-offset-y: -134px;
+@world-width: 58px;
+@world-height: 63px;
+@world-total-width: 408px;
+@world-total-height: 333px;
+@world-image: 'franchise-add-sprite.png';
+@world: 301px 134px -301px -134px 58px 63px 408px 333px 'franchise-add-sprite.png' 'world';
+@spritesheet-width: 408px;
+@spritesheet-height: 333px;
+@spritesheet-image: 'franchise-add-sprite.png';
+@spritesheet-sprites: @adv-buyer @adv-experience @adv-professional @adv-site @adv-term @arrow-left-md @arrow-left @arrow-right-md @arrow-right @benefit-title @examples-title @hand @location-title @man-one-active @man-one @man-three-active @man-three @man-two-active @man-two @money-md @money @questions-title @select-arrow @success-title @volume-md @volume @world-md @world;
+@spritesheet: 408px 333px 'franchise-add-sprite.png' @spritesheet-sprites;
+
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.sprite-width(@sprite) {
+  width: extract(@sprite, 5);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 6);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 3);
+  @sprite-offset-y: extract(@sprite, 4);
+  background-position: @sprite-offset-x @sprite-offset-y;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: extract(@sprite, 9);
+  @sprite-image-bare: ~`"@{sprite-image}".slice(1, -1)`;
+  background-image: url(@sprite-image-bare);
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+.sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
+  @sprite: extract(@sprites, @i);
+  @sprite-name: e(extract(@sprite, 10));
+  .@{sprite-name} {
+    .sprite(@sprite);
+  }
+  .sprites(@sprites, @i + 1);
+}

@@ -1,0 +1,304 @@
+//блок выбора направления франшиз
+.franchise-area {
+  width: 240px;
+  box-shadow: @shadow;
+  padding-bottom: 10px;
+  background-color: #ffffff;
+  position: relative;
+  .bottom-gradient();
+}
+
+.franchise-area__title {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: @blue;
+  background: @gradient;
+  padding: 6px 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  box-shadow: @shadow;
+}
+
+.franchise-area__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-left: 10px;
+}
+
+.franchise-area__item {
+
+  a {
+    text-decoration: none;
+    color: @blue;
+    position: relative;
+    padding: 6px 0;
+    padding-left: 40px;
+    display: block;
+    
+    &:before {
+      position: absolute;
+      content: '';
+      background-image: url('../img/franchise/franchise-sprite.png');
+      background-position: @-barbell-offset-x @-barbell-offset-y;
+      width: 25px;
+      height: 25px;
+      border: 1px solid @green;
+      border-radius: 50%;
+      left: 0;
+      top: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: #47A424;
+      font-weight: bold;
+      &:before {
+        top: -2px;
+        border: 3px solid @green;
+      }
+    }
+  }
+}
+
+//иконки для направлений
+.franchise-area__item--restaurant {
+  a {
+    &:before {
+      background-position: @-restaurant-offset-x @-restaurant-offset-y;
+    }
+  }
+}
+
+.franchise-area__item--business {
+  a {
+    &:before {
+      background-position: @-university-offset-x @-university-offset-y;
+    }
+  }
+}
+
+.franchise-area__item--people {
+  a {
+    &:before {
+      background-position: @-date-offset-x @-date-offset-y;
+    }
+  }
+}
+
+.franchise-area__item--children {
+  a {
+    &:before {
+      background-position: @-girl-offset-x @-girl-offset-y;
+    }
+  }
+}
+
+.franchise-area__item--production {
+  a {
+    &:before {
+      background-position: @-factory-offset-x @-factory-offset-y;
+    }
+  }
+}
+
+.franchise-area__item--beauty {
+  a {
+    &:before {
+      background-position: @-cut-offset-x @-cut-offset-y;
+    }
+  }
+}
+
+.franchise-area__item--fitness {
+  a {
+    &:before {
+      background-position: @-barbell-offset-x @-barbell-offset-y;
+    }
+  }
+}
+
+.franchise-area__item--medicine {
+  a {
+    &:before {
+      background-position: @-doctor-offset-x @-doctor-offset-y;
+    }
+  }
+}
+
+.franchise-area__item--education {
+  a {
+    &:before {
+      background-position: @-literature-offset-x @-literature-offset-y;
+    }
+  }
+}
+
+.franchise-area__item--treat {
+  a {
+    &:before {
+      background-position: @-party-offset-x @-party-offset-y;
+    }
+  }
+}
+
+.franchise-area__item--tourism {
+  a {
+    &:before {
+      background-position: @-cruise-offset-x @-cruise-offset-y;
+    }
+  }
+}
+
+.franchise-area__item--auto {
+  a {
+    &:before {
+      background-position: @-s-u-v-offset-x @-s-u-v-offset-y;
+    }
+  }
+}
+
+.franchise-area__item--hotel {
+  a {
+    &:before {
+      background-position: @-hotel-offset-x @-hotel-offset-y;
+    }
+  }
+}
+
+.franchise-area__item--internet {
+  a {
+    &:before {
+      background-position: @-internet-offset-x @-internet-offset-y;
+    }
+  }
+}
+
+.franchise-area__item--adv {
+  a {
+    &:before {
+      background-position: @-magazine-offset-x @-magazine-offset-y;
+    }
+  }
+}
+
+.franchise-area__item--realty {
+  a {
+    &:before {
+      background-position: @-building-offset-x @-building-offset-y;
+    }
+  }
+}
+
+.franchise-area__item--building {
+  a {
+    &:before {
+      background-position: @-hammer-offset-x @-hammer-offset-y;
+    }
+  }
+}
+
+.franchise-area__item--shoes {
+  a {
+    &:before {
+      background-position: @-hanger-offset-x @-hanger-offset-y;
+    }
+  }
+}
+
+.franchise-area__item--food {
+  a {
+    &:before {
+      background-position: @-vegetarian-offset-x @-vegetarian-offset-y;
+    }
+  }
+}
+
+.franchise-area__item--accessories {
+  a {
+    &:before {
+      background-position: @-safety-pin-offset-x @-safety-pin-offset-y;
+    }
+  }
+}
+
+.franchise-area__item--furniture {
+  a {
+    &:before {
+      background-position: @-armchair-offset-x @-armchair-offset-y;
+    }
+  }
+}
+
+.franchise-area__item--retail {
+  a {
+    &:before {
+      background-position: @-shopping-offset-x @-shopping-offset-y;
+    }
+  }
+}
+
+.franchise-area__item--new {
+  margin-top: 10px;
+  text-transform: uppercase;
+  position: relative;
+  a {
+    &:before {
+      background-position: @-new-offset-x @-new-offset-y;
+    }
+  }
+  &:after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    background-color: @text-gray;
+    top: -7px;
+    left: 0;
+    right: 20px;
+  }
+}
+
+.franchise-area__item--all {
+  text-transform: uppercase;
+  a {
+    &:before {
+      background-position: @-all-offset-x @-all-offset-y;
+    }
+  }
+}
+
+
+
+@media (max-width: 1300px) {
+  .main-content .franchise-area {
+    width: 220px;
+    font-size: 15px;
+  }
+  .main-content .franchise-area__item {
+    a {
+      padding-left: 32px;
+    }
+  }
+  .franchise-area__title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .main-content .franchise-area {
+    width: 210px;
+    font-size: 14px;
+  }
+  
+  .main-content .franchise-area__item {
+    a {
+      padding-left: 32px;
+    }
+  }
+}
+
+
+
+
+
+

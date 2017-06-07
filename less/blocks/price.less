@@ -1,0 +1,111 @@
+//блок с выбором цены
+
+.price {
+  width: 200px;
+  box-shadow: @shadow;
+  padding: 10px;
+  background-color: #ffffff;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.price__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #666666;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 7px;
+  &:before {
+    position: absolute;
+    content: '';
+    height: 3px;
+    left: 0;
+    right: 0;
+    background-color: @green;
+    bottom: 0;
+  }
+  
+  &:after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    right: 0;
+    left: 138px;
+    background-color: @gray;
+    bottom: 0;
+  }
+}
+
+.price__link {
+  display: block;
+  padding: 5px 0;
+  text-align: center;
+  color: #005b82;
+  border: 1px solid #005b82;
+  transition: @transition;
+  margin-bottom: 10px;
+  text-decoration: none;
+  &:hover {
+    background-color: #005b82;
+    color: #ffffff;
+  }
+}
+
+.price__link--active {
+  background-color: #005b82;
+  color: #ffffff;
+}
+
+@media (max-width: 1300px) {
+  .price {
+    width: 180px;
+  }
+}
+
+@media (max-width: 985px) {
+  .price {
+    width: auto;
+    margin: 15px;
+    box-shadow: none;
+    border: 4px solid @blue;
+    padding-bottom: 0;
+  }
+  
+  .price__links {
+    text-align: justify;
+    position: relative;
+    margin: 0 auto;
+    max-width: 800px;
+    &:after {
+      width: 100%;
+      height: 0;
+      visibility: hidden;
+      overflow: hidden;
+      content: '';
+      display: inline-block;
+    }
+  }
+  
+  .price__link {
+    display: inline-block;
+    width: 134px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .price__links {
+    max-width: 500px;
+  }
+  .price__link:nth-child(4),
+  .price__link:nth-child(5) {
+    width: 45%;
+  }
+  
+}
+
+

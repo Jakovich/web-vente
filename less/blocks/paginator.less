@@ -1,0 +1,138 @@
+//блок с номерами страниц
+
+.paginator {
+  max-width: 560px;
+  margin: 20px auto;
+  text-align: center;
+  padding: 0px;
+}
+
+.paginator__item {
+  border: 2px solid @green;
+  text-decoration: none;
+  color: @blue;
+  display: inline-block;
+  font-family: "PT Sans", "Trebuchet MS", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  height: 38px;
+  line-height: 38px;
+  margin-right: 9px;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: top;
+  width: 38px;
+  transition: @transition;
+  &:hover {
+    background-color: @green;
+    color: #ffffff;
+  }
+}
+
+.paginator__item--arrow {
+  border: none;
+  width: 20px;
+  i {
+    font-size: 45px;
+    position: relative;
+    top: -5px;
+  }
+  &:hover {
+    background-color: #ffffff;
+    color: @green;
+  }
+}
+
+.paginator__item--dot {
+  &:hover {
+    border: 2px solid @green;
+    color: @blue;
+    background-color: #ffffff;
+    cursor: text;
+  }
+  
+}
+
+.paginator__item--current {
+  background-color: @green;
+  color: #ffffff;
+}
+
+@media (max-width: 1100px) {
+  body.full-width {
+  .paginator {
+    text-align: center;
+    }
+  .paginator__item {
+    font-size: 17px;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 7px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: top;
+    width: 30px;
+    transition: @transition;
+      &:hover {
+        background-color: @green;
+        color: #ffffff;
+      }
+    }
+    
+    .paginator__item--arrow {
+      border: none;
+      width: 15px;
+      i {
+        font-size: 38px;
+        position: relative;
+        top: -5px;
+      }
+      &:hover {
+        background-color: #ffffff;
+        color: @green;
+      }
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  .paginator {
+    text-align: center;
+  }
+  
+  .paginator__item {
+    font-size: 17px;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 7px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: top;
+    width: 30px;
+    transition: @transition;
+  &:hover {
+    background-color: @green;
+    color: #ffffff;
+    }
+  }
+  
+  .paginator__item--arrow {
+    border: none;
+    width: 15px;
+    i {
+      font-size: 38px;
+      position: relative;
+      top: -5px;
+    }
+    &:hover {
+      background-color: #ffffff;
+      color: @green;
+    }
+  }
+
+}
+
+
+

@@ -1,0 +1,171 @@
+.error {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.error__title {
+  font-size: 96px;
+  color: #005f85;
+  margin-top: 15px;
+  padding: 0 25px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.error__explic {
+  display: inline-block;
+  background-color: #ecf1f4;
+  border-left: 6px solid @blue-dark;
+  padding: 5px 10px;
+  margin: 15px 10px;
+  color: #797979;
+  max-width: 630px;
+  width: 70%;
+  font-size: 18px;
+}
+
+.error__explic-title {
+  font-size: 24px;
+  margin: 10px 0;
+
+}
+
+.error__advice {
+  width: 400px;
+  margin-left: 25%;
+  color: #797979;
+  font-size: 18px;
+  p {
+    font-weight: bold;
+    margin: 5px 0;
+  }
+}
+
+.error__advice-items {
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+  li {
+    margin: 5px 0;
+  }
+  a {
+    color:#336699;
+    text-decoration: none;
+    transition: @transition;
+    &:hover {
+      color: @green;
+    }
+  }
+}
+
+.error-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.error-menu {
+  list-style: none;
+  .clearfix();
+ padding: 0;
+}
+
+.error-menu__item {
+  float: left;
+  text-align: center;
+  width: 33.33%;
+
+   &>a {
+    text-decoration: none;
+    display: inline-block;
+    border: 3px solid @blue-dark;
+    color: #666666;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 7px;
+    transition: @transition;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    &:hover {
+      background-color: @blue-dark;
+      color: #ffffff;
+    }
+  }
+  .franchise-area__items {
+    display: inline-block;
+    border-top: 1px solid #999999;
+    padding-top: 8px;
+  }
+  .franchise-area__item {
+    text-align: left;
+  }
+}
+
+@media (max-width: 1300px) {
+  .error__explic {
+    font-size: 16px;
+  }
+
+  .error__advice {
+    font-size: 16px;
+  }
+
+  .error__explic-title {
+    font-size: 20px;
+  }
+  .error-menu {
+    a {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 985px) {
+  .error__explic {
+    width: 60%;
+  }
+
+
+  .error-menu__item {
+    &>a {
+      padding: 7px 14px;
+       font-size: 14px;
+    }
+  }
+
+  .franchise-area__item {
+    a {
+    font-size: 14px;
+    }
+  }
+}
+@media (max-width: 700px) {
+  .error__explic {
+    display: block;
+    width: auto;
+    max-width: none;
+  }
+
+  .error__advice {
+    width: auto;
+  }
+  .error__title {
+    display: block;
+    width: auto;
+    max-width: none;
+  }
+  .error-menu__item {
+    display: block;
+    width: 300px;
+    margin: 5px auto;
+    float: none;
+    .franchise-area__items {
+      display: none;
+    }
+    &>a {
+      padding: 7px 6px;
+      font-size: 16px;
+      display: block;
+    }
+  }
+}

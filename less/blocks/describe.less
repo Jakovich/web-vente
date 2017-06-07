@@ -1,0 +1,121 @@
+//текстовый блок с описанием
+.describe {
+  padding: 35px;
+  font-size: 16px;
+  background-color: @blue-light;
+  color: #1d2129;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  .bottom-gradient ();
+}
+
+.describe--paddingsm {
+  padding: 10px 35px;
+  &:after {
+    height: 0;
+  }
+}
+
+.describe__title {
+  color: #00557E;
+  font-weight: normal;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #999999;
+  margin-bottom: 5px;
+
+  text-align: left;
+}
+
+.describe__item {
+  font: 16px;
+  color: #797979;
+  margin-top: 0;
+  text-align: left;
+  a {
+    color: @blue;
+    transition: @transition;
+    &:hover {
+      color: @green;
+    }
+  }
+}
+
+.describe__item--center {
+  text-align: center;
+  padding: 0 15%;
+}
+
+.describe__list {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  right: 0;
+  color: #797979;
+  i {
+    color: #00557E;
+  }
+}
+/*
+  Внутренний отступ снизу, 
+который равен 56.25% — 
+задает высоту контейнера 
+(если соотношение 16:9, 
+если 4:3 — поставьте 75%). 
+*/
+.describe__video {
+  margin: 20px 5%;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  
+  iframe { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.describe__download {
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  margin:  20px 7%;
+  color: #00557E;
+  transition: @transition;
+  
+  i {
+    color: @gray-dark;
+    font-size: 25px;
+    display: inline-block;
+    margin-right: 15px;
+    transition: @transition;
+  }
+  &:hover {
+    color: @green;
+    
+    i {
+      color: @green;
+    }
+  }
+}
+
+@media (max-width: 985px) {
+  .describe {
+    font-size: 18px;
+    margin: 0 15px;
+    padding: 30px 15px;
+  }
+  
+  .describe--paddingsm {
+    font-size: 18px;
+    margin: 0;
+    padding: 15px;
+  }
+}

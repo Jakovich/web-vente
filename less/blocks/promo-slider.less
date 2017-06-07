@@ -1,0 +1,87 @@
+//горизонтальный слайдер промо
+/** Carousel **/
+//общие стили
+
+
+.promo-slider__items {
+  width: 20000em;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+
+.promo-slider__prev:hover span,
+.promo-slider__next:hover span {
+  display: block;
+}
+
+.promo-slider__prev.inactive,
+.promo-slider__next.inactive {
+  opacity: .5;
+  cursor: default;
+}
+
+/** Carousel Pagination **/
+
+
+
+
+
+
+
+.promo-slider__item {
+  padding-top: 15px;
+  float: left;
+  width: 772px;
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto !important;
+  }
+}
+
+
+.promo-slider__jcarousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.promo-slider__jcarousel-wrapper {
+  margin: 0 auto;
+  position: relative;
+  border: none;
+}
+
+.promo-slider__prev,
+.promo-slider__next {
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  color: @blue;
+  text-decoration: none;
+  font: 45px Arial, sans-serif;
+}
+
+.promo-slider__prev {
+  left: -40px;
+}
+
+.promo-slider__next {
+  right: -40px;
+}
+
+.promo-slider {
+  padding: 0 30px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  max-width: 770px;
+}

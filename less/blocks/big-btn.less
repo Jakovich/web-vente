@@ -1,0 +1,60 @@
+//кнопки добавить франшизу/показать еще
+.big-btn {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: transparent;
+  span {
+    background-color: #268f3b;
+    background: linear-gradient(to bottom, #268f3b, #61b05b);
+    display: inline-block;
+    margin-left: 15px;
+    vertical-align: top;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    padding: 0 15px;
+    width: 190px;
+    text-align: center;
+    box-shadow: @shadow;
+    transition: @transition;
+  }
+  i {
+    color: #268f3b;
+    font-size: 44px;
+    line-height: 40px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  &:hover {
+    span {
+      background: linear-gradient(to bottom, #61b05b, #268f3b);
+    }
+  }
+}
+  
+.big-btn__list {
+  i {
+    font-size: 40px;
+  }
+}
+  
+.big-btn--blue {
+  i {
+    color: #336699;
+  }
+  span {
+    background: linear-gradient(to bottom, #025f86, #3e72ae);
+  }
+  
+  &:hover {
+    span {
+      background: linear-gradient(to bottom, #3e72ae, #025f86);
+    }
+  }
+}
