@@ -39,6 +39,7 @@
 @import "blocks/create-questions.less";
 @import "blocks/create-location.less";
 @import "blocks/create-form.less";
+@import "blocks/list-pages.less";
 @import "blocks/form-status.less";
 @import "blocks/form-create.less";
 @import "blocks/main-content.less";
@@ -84,30 +85,30 @@ html {
 }
 
 @media print {
-  
+
    html {
      height: 99%;
      max-height: none;
   }
-  
+
   body {
     height: 99%;
     margin:0.5in; font-family:times
   }
-  
-  
+
+
   * {
     background:#fff !important;
     color:#000 !important;
-    
+
   }
-  
+
   iframe {
     display: none!important;
     height: 0;
     visibility: hidden;
   }
-  
+
   h1, h2, h3 {
     page-break-after: avoid;
   }
@@ -120,24 +121,24 @@ html {
     height: 0;
     visibility: hidden;
   }
-  
+
   .main-header__info,
-  .main-header__advantages, 
+  .main-header__advantages,
   .main-header__nav {
     display: none;
   }
-  
+
  .main-header__content {
    padding: 0;
    height: auto;
   }
-    
-  
+
+
   .main-header__content-wrp {
     padding-top: 0;
     padding-bottom: 0;
     text-align: center;
-    
+
     &:after {
       display: none;
     }
@@ -146,7 +147,7 @@ html {
     }
     .clearfix();
   }
-  
+
   .main-header__logo {
     float: left;
     position: static;
@@ -160,28 +161,28 @@ html {
     }
   }
 
- 
-  
+
+
   .main-header__logo-wrp {
     display: inline-block;
     position: static;
     width: 200px;
-    
+
   }
-  
+
   .main-header__contacts {
     float: right;
     position: static;
     width: 200px;
     display: block;
   }
-  
+
   .breadcrumbs {
     display: none;
     height: 0;
   }
-  
-  
+
+
   .describe,
   .describe--paddingsm {
    position: static;
@@ -194,12 +195,12 @@ html {
      display: none;
    }
   }
-  
-  
+
+
   .describe__franchise-info {
     padding: 3px;
   }
-  
+
   .describe__franchise-info--franchiser {
     display: block;
     page-break-after:avoid;
@@ -213,15 +214,15 @@ html {
       page-break-before: avoid;
       height: auto;
     }
-    
-    
+
+
     .describe__item {
       page-break-after:avoid;
       display: block;
     }
   }
-  
-  
+
+
   .franchise__info-wrp,
   .franchise-finance__details,
   .franchise-finance__links,
@@ -230,7 +231,7 @@ html {
     height: 0;
     visibility: hidden;
   }
-  
+
   .franchise-photos__pagination,
   .franchise-photos__prev,
   .franchise-photos__next {
@@ -238,21 +239,21 @@ html {
     height: 0;
     visibility: hidden;
   }
-  
+
   .describe__franchise-info--video,
   .describe__franchise-info--pdf {
     display: none;
     height: 0;
     visibility: hidden;
   }
-  
+
   .franchise-question {
     display: none;
     height: 0;
     visibility: hidden;
   }
 
-  
+
   .main-footer__help,
   .main-footer__nav,
   .main-footer__second-row {
@@ -260,56 +261,56 @@ html {
     height: 0;
     visibility: hidden;
   }
-  
+
   .main-footer_contacts {
     margin-right: 0;
     width: 40%;
     float: right;
   }
-  
+
   .main-content__center {
     position: static;
     margin: 0;
   }
-  
-   
+
+
   .main-content__left {
 
     display: none;
     height: 0;
     visibility: hidden;
   }
-  
+
   .subscribe {
     display: none;
     height: 0;
     visibility: hidden;
   }
-  
+
   .franchise-area {
     display: none;
     height: 0;
     visibility: hidden;
   }
-  
+
   .franchise-slider,
   .francgise-slider--top {
     display: none;
     height: 0;
     visibility: hidden;
   }
-  
+
   .main-content__right {
     position: static;
     display: block;
     height: auto;
   }
-  
+
   .right-sticky,
   .left-sticky {
     display: none;
   }
-  
+
   .mobile-nav, .franchise-documents,
   .popup-franchise__overlay, .popup-franchise,
   .popup-report__overlay, .popup-report, .up-btn {
@@ -317,5 +318,5 @@ html {
     height: 0;
     visibility: hidden;
   }
-  
+
 }
