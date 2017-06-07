@@ -1,11 +1,11 @@
 {
-  "name": "bb-frontend",
+  "name": "web-vente",
   "version": "0.1.0",
   "private": true,
   "author": "Nadia Pillard",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/prodaybiznes/bb-frontend"
+    "url": "https://github.com/Jakovich/web-vente.git"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
